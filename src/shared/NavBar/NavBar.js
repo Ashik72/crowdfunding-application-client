@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [search, setSearch] = useState(false);
@@ -9,12 +10,10 @@ const NavBar = () => {
           <h2 className='text-3xl text-gray-200 font-bold'>Logo</h2>
         </div>
         <ul className='flex items-center text-gray-200'>
-          <li className='px-5 border-r-2 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">Home</a></li>
-          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">About</a></li>
-          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">Donate</a></li>
-          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">Blogs</a></li>
-          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">Gallery</a></li>
-          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><a href="">Dashboard</a></li>
+          <li className='px-5 border-r-2 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><Link to="home">Home</Link></li>
+          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><Link to="signin">Login</Link></li>
+          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><Link to="signup">Register</Link></li>
+          <li className='border-r-2 px-5 hover:bg-white hover:text-[#379237] hover:rounded-full transition-all duration-200'><Link to="/dashboard/user">Dashboard</Link></li>
           {
             search ? <li className='px-5 text-[18px] cursor-pointer'><i onClick={() => setSearch(!search)} className="fa-solid fa-xmark"></i></li> : <li onClick={() => setSearch(!search)} className='px-5'><i className="fa-solid fa-magnifying-glass cursor-pointer"></i></li> 
           }
