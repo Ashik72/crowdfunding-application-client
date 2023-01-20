@@ -1,0 +1,13 @@
+.blogsBannerImg {
+  height: 348px;
+  width: 100%;
+  text-align: center;
+  padding-top: 170px;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(rgba(49, 46, 49, 0.8), rgba(62, 53, 53, 0.8)),
+    url("https://i.postimg.cc/qvV2QZRy/blog-Banner.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-repeat: no-repeat;
+}

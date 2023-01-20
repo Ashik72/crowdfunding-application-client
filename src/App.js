@@ -1,10 +1,14 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import About from "./components/About";
+import { Toaster } from "react-hot-toast";
+import "react-photo-view/dist/react-photo-view.css";
+import { router } from "./Router/Router";
 
 function App() {
   return (
-    <div className="App">
-      <About />
+    <div>
+      <RouterProvider router={router}></RouterProvider>
+      <Toaster />
     </div>
   );
 }

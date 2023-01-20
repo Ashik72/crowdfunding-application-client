@@ -1,0 +1,29 @@
+.bannerImg {
+  height: 348px;
+  width: 100%;
+  text-align: center;
+  padding-top: 170px;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(rgba(49, 46, 49, 0.8), rgba(62, 53, 53, 0.8)),
+    url("https://i.postimg.cc/hvLDz6G9/img10.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galleryBgImg {
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  overflow: hidden;
+  /* fallback for old browsers */
+  /* background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("https://ik.imagekit.io/ikmedia/blog/hero-image.jpeg"); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(rgba(49, 46, 49, 0.8), rgba(62, 53, 53, 0.8)),
+    url("https://i.postimg.cc/YCnpW1ty/img20.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-repeat: no-repeat;
+}

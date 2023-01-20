@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
-import Navber from "./Navber";
 
 export default function About() {
   //   const products = [
@@ -69,7 +67,6 @@ export default function About() {
 
   return (
     <div>
-      <Navber></Navber>
       {/* About start  */}
       <div>
         <div class="w-full h-screen bg-white flex flex-wrap">
@@ -708,7 +705,6 @@ export default function About() {
           </div>
         </div>
       </div> */}
-      <Footer />
     </div>
   );
 }
