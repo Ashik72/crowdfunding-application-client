@@ -1,0 +1,27 @@
+.custom-border {
+    box-shadow: 0px 0px 4px 0px #02a95c;
+    margin-bottom: 25px;
+    transition: .7s !important;    
+}
+
+.box img {
+    overflow: hidden !important;
+}
+
+.custom-border:hover .box {
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+.youtube {
+    box-shadow: 1px 1px 10px 1px #02a95c;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.youtube:hover {
+    color: #02a95c;
+    background: red;
+    transform: scale(1.5);
+    /* width: 50%; */
+}

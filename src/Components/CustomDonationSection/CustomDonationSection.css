@@ -1,0 +1,36 @@
+.custom_button {
+    border: 2px solid #ffffff ;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px 0px;
+    border-radius: 2px;
+}
+
+.custom_button:hover {
+    border: 2px solid rgb(49, 46, 46);
+}
+
+.custom_outline {
+    background: none;
+    text-align: center;
+}
+
+.custom_button_submit {
+    border: 2px solid #ffffff ;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 0px;
+    margin: 35px;
+    border-radius: 10px;
+    transition: all ease-in .3s;
+}
+
+.custom_button_submit:hover {
+    background: #202124;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+}

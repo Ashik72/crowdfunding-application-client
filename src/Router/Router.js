@@ -1,10 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../layout/DashboardLayout/DashboardLayout";
 import Main from "../layout/Main";
 import About from "../pages/About/About";
 import Blogs from "../pages/Blogs/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
+import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
+import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
+import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
+import DashboardDonors from "../pages/Dashboard/DashboardDonors/DashboardDonors";
+import DashboardUser from "../pages/Dashboard/DashboardUser/DashboardUser";
+import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
-import Home from "../pages/Home/Home";
+import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 
@@ -45,6 +52,22 @@ export const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp></SignUp>,
       },
+      {
+        path: "/donate",
+        element: <Donate />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { path: "/dashboard", element: <Dashboard /> },
+      // {path:"overview",element:<DashboardOverview/>},
+      { path: "user", element: <DashboardUser /> },
+      { path: "activity", element: <DashboardActivities /> },
+      { path: "bankdonors", element: <DashboardBankDonation /> },
+      { path: "donors", element: <DashboardDonors /> },
     ],
   },
 ]);

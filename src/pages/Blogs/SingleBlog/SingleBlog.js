@@ -263,7 +263,7 @@ const SingleBlog = () => {
             <h1 className="text-3xl font-bold text-center m-5">
               Please Login to Add a Comment!
               <button
-                onClick={navigate("/")}
+                // onClick={navigate("/")}
                 className="btn btn-link text-3xl font-bold text-slate-700"
               >
                 {" "}
