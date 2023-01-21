@@ -9,7 +9,7 @@ import HeroSection from "../../HeroSection/HeroSection";
 import FirstSection from "../../FirstSection/FirstSection";
 // import HeroSection from "../../HeroSection/HeroSection";
 // import NeedMoreHelp from '../../NeedMoreHelp/NeedMoreHelp';
-
+import './style.css'
 const Home = () => {
   return (
     <div className="">

@@ -1,18 +1,14 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
-import { MultiStepContext } from "./stepContext/StepContext";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const FirstStep = () => {
   const { setCurrentStepData, userData, setUserData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
 
   const handleUserDonateData = (event) => {
     event.preventDefault();
-
-    const fName = event.target.fName;
-    console.log(fName);
   };
-
   return (
     <div>
       {/* <div>
@@ -40,7 +36,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="fName"
+                htmlFor="fName"
               >
                 First Name <span className="text-2xl text-red-500">*</span>
               </label>
@@ -49,10 +45,10 @@ const FirstStep = () => {
                 id="fName"
                 type="text"
                 placeholder="First name"
-                // value={userData["fName"]}
-                // onChange={(event) =>
-                //   setUserData({ ...userData, fName: event.target.value })
-                // }
+                value={userData["fName"]}
+                onChange={(event) =>
+                  setUserData({ ...userData, fName: event.target.value })
+                }
                 name="fName"
                 required
               />
@@ -62,7 +58,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="lName"
+                htmlFor="lName"
               >
                 Last Name <span className="text-2xl text-red-500">*</span>
               </label>
@@ -83,7 +79,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="email"
+                htmlFor="email"
               >
                 Email <span className="text-2xl text-red-500">*</span>
               </label>
@@ -105,7 +101,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="number"
+                htmlFor="number"
               >
                 Number <span className="text-2xl text-red-500">*</span>
               </label>
@@ -127,7 +123,7 @@ const FirstStep = () => {
           <div className="w-full  px-3">
             <label
               className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="address"
+              htmlFor="address"
             >
               Address <span className="text-2xl text-red-500">*</span>
             </label>
@@ -150,7 +146,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="city"
+                htmlFor="city"
               >
                 City Name <span className="text-2xl text-red-500">*</span>
               </label>
@@ -171,7 +167,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="state"
+                htmlFor="state"
               >
                 State name <span className="text-2xl text-red-500">*</span>
               </label>
@@ -192,7 +188,7 @@ const FirstStep = () => {
             <div className="w-full  px-3">
               <label
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="zipCode"
+                htmlFor="zipCode"
               >
                 Zip / postal code{" "}
                 <span className="text-2xl text-red-500">*</span>

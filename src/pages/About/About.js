@@ -68,7 +68,7 @@ export default function About() {
   return (
     <div>
       {/* About start  */}
-      <div>
+      <div className="">
         <div class="w-full h-screen bg-white flex flex-wrap">
           <div class="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
             <div class="shadow-xl md:shadow-none px-12 py-12 md:pl-0 md:pr-24 bg-white md:-mr-64 relative z-10">

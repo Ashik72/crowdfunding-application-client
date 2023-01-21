@@ -1,11 +1,11 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
 import { FaCheck } from "react-icons/fa";
-import { MultiStepContext } from "./stepContext/StepContext";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const ThirdStep = () => {
   const { setCurrentStepData, userData, setUserData, submitStepperFinalData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
 
   // const moreOnclicHnadler = useCallback({
 

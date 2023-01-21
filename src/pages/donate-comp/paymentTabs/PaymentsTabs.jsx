@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Bkash from "../mobileGet/Bkash";
 import Nagad from "../mobileGet/Nagad";
 import Rocket from "../mobileGet/Rocket";
-import { MultiStepContext } from "../stepperTwo/stepContext/StepContext";
 
 function PaymentsTabs() {
   const [activeTab, setActiveTab] = useState(0);
@@ -11,7 +11,7 @@ function PaymentsTabs() {
   const [renderComp, setRenderComp] = useState("bkash");
 
   const { setCurrentStepData, userData, setUserData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
 
   // payment data
   useEffect(() => {
@@ -37,7 +37,7 @@ function PaymentsTabs() {
     setRenderComp(bankingValue);
   };
 
-  console.log(renderComp);
+  // console.log(renderComp);
 
   return (
     <div className="max-w-[90%] mx-auto">
@@ -83,7 +83,7 @@ function PaymentsTabs() {
               <div className="w-full  px-3">
                 <label
                   className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="state"
+                  htmlFor="state"
                 >
                   Card name <span className="text-2xl text-red-500">*</span>
                 </label>
@@ -104,7 +104,7 @@ function PaymentsTabs() {
               <div className="w-full  px-3">
                 <label
                   className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="state"
+                  htmlFor="state"
                 >
                   Card number <span className="text-2xl text-red-500">*</span>
                 </label>
@@ -125,7 +125,7 @@ function PaymentsTabs() {
               <div className="w-full  px-3">
                 <label
                   className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="state"
+                  htmlFor="state"
                 >
                   Amount <span className="text-2xl text-red-500">*</span>
                 </label>
@@ -148,7 +148,7 @@ function PaymentsTabs() {
                 <div className="w-full  px-3">
                   <label
                     className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="state"
+                    htmlFor="state"
                   >
                     Expiration date{" "}
                     <span className="text-2xl text-red-500">*</span>
@@ -173,7 +173,7 @@ function PaymentsTabs() {
                 <div className="w-full  px-3">
                   <label
                     className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="state"
+                    htmlFor="state"
                   >
                     CVV <span className="text-2xl text-red-500">*</span>
                   </label>

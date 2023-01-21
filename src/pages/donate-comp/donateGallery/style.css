@@ -1,0 +1,716 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* font family
+font-family: 'Roboto Slab', serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main-hero {
+  background-image: url("https://i.ibb.co/Vq7qppG/dsdf.jpg");
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+  max-width: 100%;
+  padding: 150px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  /* background-color: #972ae6; */
+  /* background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%); */
+}
+
+.main-hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%); */
+  background-color: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.shape-wrap {
+  position: absolute;
+  top: 100%;
+}
+
+.shape-area {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  border-radius: 0 0 0 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.hero-landing-text h1 {
+  font-family: "Roboto Slab", serif;
+}
+
+.shape-middle {
+  width: 60%;
+  height: 90%;
+  top: -50% !important;
+  right: 0;
+  border-radius: 0px 322px 0px 0px;
+  position: absolute;
+  transform: translateY(-45%);
+  position: absolute;
+  margin-top: 1px;
+}
+
+.shape-middle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 50% !important;
+  margin-top: 1px;
+  right: 0;
+  border-radius: 0px 322px 0px 0px;
+  position: absolute;
+  transform: translateY(-50%);
+  position: absolute;
+  background-image: url("https://i.ibb.co/VVK1ZS7/sanjoy-sadhukhan-Wh-E7-KK-HPm-Y-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000;
+}
+
+/* .shape-middle {
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    top: -50% !important;
+    right: 0;
+    border-radius: 0px 484px 0px 6px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background-image: url("https://i.ibb.co/s9rv3tY/hero-2.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+  } */
+
+/* donate-hero-article */
+.donate-hero-article {
+  border: 1px solid #ddd;
+  padding: 15px;
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1;
+}
+.donate-hero-article:hover.donate-hero-article::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 200%;
+  background-image: linear-gradient(#00ccff, #d400d4);
+  animation: hero-animate 3s linear infinite;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.donate-hero-article:hover.donate-hero-article::after {
+  position: absolute;
+  content: "";
+  background: white;
+  inset: 5px;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+@keyframes hero-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* .donate-hero-article:hover {
+  background: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+} */
+.donate-hero-article:hover .hero-top-images img {
+  /* clip-path: inset(0 0 0 0); */
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+.hero-top-images {
+}
+.hero-top-images img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background-size: cover;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+/* why Donate */
+.whyDonate {
+  margin-top: 35rem;
+}
+
+.why-play-btn {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  right: -26px;
+  transform: translateY(-50%);
+  transition: 0.3s all ease-in-out;
+  overflow: hidden;
+}
+
+.play-btn-effect {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+}
+
+.play-btn-effect:hover.play-btn-effect::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100px;
+  background: white;
+  animation: play-btn-animate 1s linear infinite;
+  top: -29%;
+  left: 41%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.play-btn-effect:hover.play-btn-effect::after {
+  position: absolute;
+  content: "";
+  inset: 4px;
+  /* border-radius: 5px; */
+  background-color: #a04dec;
+  z-index: -1;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+@keyframes play-btn-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.why-play-btn:hover {
+  cursor: pointer;
+}
+
+/* help people */
+.help-people {
+  background-image: url("https://i.ibb.co/8mqF0pK/carousel-3.jpg");
+  margin-top: 35rem;
+  border-radius: 0 0 322px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 150px 0;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+}
+
+.help-people::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 322px 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* Contribute area */
+.contribute-single-box {
+  display: flex;
+  justify-content: center;
+  background-color: #222931;
+  align-items: center;
+}
+
+.contribute-imagesTwo,
+.contribute-aricle,
+.contribute-images {
+  width: 50%;
+}
+.contribute-aricle {
+  width: 50%;
+  /* padding-left: 150px;
+  padding-right: 15px; */
+}
+
+.contribute-images {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/VVK1ZS7/sanjoy-sadhukhan-Wh-E7-KK-HPm-Y-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 500px;
+  height: 450px;
+}
+
+.contribute-imagesTwo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/Vq7qppG/dsdf.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 500px;
+  height: 450px;
+}
+
+.contribute-aricle h3 {
+  font-size: 19px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.contribute-aricle p {
+  color: rgb(219, 214, 214);
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 26px;
+  font-size: 15px;
+}
+
+.contribute-aricle .sp {
+  border-left: 1px solid rgb(121 121 121);
+  padding-left: 55px;
+  margin-left: 30px;
+  height: 64px;
+  padding-top: 0px;
+}
+
+/* Subscribe area */
+.subscribe-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 78px;
+  background-color: #fff4d6;
+  margin-top: 50px !important;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.subscribe-box input[type="email"] {
+  width: 35%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+  margin: 0;
+  background-color: #d9d9d9;
+}
+
+.subscribe-box ::placeholder {
+  text-align: left;
+}
+
+button.subscribe-btn {
+  padding: 12px 20px;
+  margin: 0;
+  margin-left: -6px;
+  background: rgb(255, 89, 89);
+  border: 2px solid rgb(255, 89, 89);
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* media query */
+
+@media only screen and (max-width: 768px) {
+  .whyDonate {
+    margin-top: 90rem !important;
+  }
+}
+
+/* navbar */
+
+.navigation {
+  padding: 30px 0px;
+  position: fixed;
+  z-index: 1050;
+  width: 100%;
+  color: #fff;
+  /* background-color: #000000; */
+}
+
+.navigation .nav-item .nav-link {
+  margin-left: 15px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.sticky {
+  padding: 0;
+  background: #fff;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  transition: 0.5s;
+  padding: 5px 0px !important;
+}
+
+.sticky .nav-item .nav-link {
+  color: #000;
+  margin-left: 15px;
+}
+
+/* show hidden menu class */
+.logo-show {
+  display: inline-block !important;
+}
+.logo-show {
+  display: none !important;
+}
+
+.nav-donate-btn {
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1pc white;
+  background: #fff;
+  color: #000;
+  transition: 0.5s all ease-in-out;
+  text-transform: capitalize !important;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sticky .nav-item .nav-donate-btn {
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1pc red;
+  background: #800080;
+  color: #000;
+  overflow: hidden;
+}
+
+.nav-donate-btn:hover.nav-donate-btn::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 339%;
+  background-image: linear-gradient(#00ccff, #d400d4);
+  animation: donate-btn-animate 2s linear infinite;
+  top: -113%;
+  left: 37%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.nav-donate-btn:hover.nav-donate-btn::after {
+  position: absolute;
+  content: "";
+  inset: 4px;
+  /* border-radius: 5px; */
+  background-color: white;
+  z-index: -1;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@keyframes donate-btn-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* off canvas menu */
+.off-canvas-menu {
+  background: #000;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  padding: 15px;
+  left: -100%;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateX(0);
+  top: 0;
+}
+
+.off-canvas-canvas-menu-active {
+  left: 0 !important;
+  top: 0;
+  opacity: 1;
+  transform: translateX(1);
+}
+
+.off-canvas-menu-item .nav-item {
+  line-height: 5px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.off-canvas-menu-item .nav-item .nav-link {
+  color: #fff;
+}
+
+/* off canvas menu button */
+
+.click-menu-btn {
+  border: 2px solid #fff;
+}
+.click-menu-btn span {
+  color: #fff;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 5px;
+}
+
+.sticky .click-menu-btn span {
+  color: #000;
+  background-color: #000;
+}
+
+.menu-overly {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 998;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 31px;
+  cursor: pointer;
+}
+
+/* Top banner */
+.top-banner {
+  position: relative;
+  z-index: 1;
+}
+
+.top-banner::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* donate galley */
+.donate-gallery-box {
+  width: 100vh;
+  height: 100vh;
+}
+.donate-gallery-item {
+  min-width: 200px;
+  min-height: 200px;
+  object-fit: cover;
+  max-width: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: absolute;
+}
+.donate-gallery-item img {
+  /* max-width: 100%; */
+  max-width: 200px;
+  max-height: 200px;
+  height: 100%;
+  object-fit: cover;
+  /* position: absolute; */
+}
+
+.donate-gallery-images-1 {
+  top: 10%;
+  left: 65%;
+}
+.donate-gallery-images-2 {
+  top: 45%;
+  left: 166%;
+}
+
+/* *************************************** */
+
+.row {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.diamond1 {
+  display: inline-block;
+  padding-right: 20px;
+}
+.img1 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.diamond2 {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.img2 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.diamond3 {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.img3 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.diamond4 {
+  display: inline-block;
+  padding-right: 20px;
+  margin-top: -140px;
+}
+
+.img4 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+.diamond5 {
+  display: inline-block;
+  padding-right: 20px;
+  margin-top: -140px;
+}
+
+.img5 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.diamond6 {
+  display: inline-block;
+  padding-right: 20px;
+  margin-top: -140px;
+}
+
+.img6 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.diamond7 {
+  display: inline-block;
+  padding-right: 20px;
+  margin-top: -140px;
+}
+
+.img7 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.diamond8 {
+  display: inline-block;
+  padding-right: 20px;
+  margin-top: -140px;
+}
+
+.img8 {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+/* payment tab active */
+.active {
+  color: #000 !important;
+}
