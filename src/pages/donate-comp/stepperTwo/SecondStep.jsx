@@ -4,9 +4,29 @@ import PaymentsTabs from "../paymentTabs/PaymentsTabs";
 import { MultiStepContext } from "./stepContext/StepContext";
 
 const SecondStep = () => {
-  const { setCurrentStepData, userData, setUserData, submitStepperFinalData } =
+  const { setCurrentStepData, userData, setUserData, submitStepperFinalData, stepperFinalData } =
     useContext(MultiStepContext);
-
+  const handleUserDonationData = (e) => {
+    console.log(userData);
+    const cardData = {
+      fullName: userData.fName + " " + userData.lName,
+      amount: userData.amount,
+      email: userData.email,
+      address: userData.address,
+      cardHolderName: userData.cardType,
+    }
+    fetch('http://localhost:5000/payment', {
+      method: "POST",
+      headers: {
+        "content-type":"application/json"
+      },
+      body: JSON.stringify(cardData)
+    })
+      .then(res => res.json())
+      .then(data => {
+      console.log(data);
+    })
+  }
   return (
     <div>
       <PaymentsTabs />
@@ -15,7 +35,7 @@ const SecondStep = () => {
           Back
         </Button>
         <Button variant="contained" onClick={() => setCurrentStepData(3)}>
-          Submit
+          <span onClick={handleUserDonationData}>Submit</span>
         </Button>
       </div>
     </div>

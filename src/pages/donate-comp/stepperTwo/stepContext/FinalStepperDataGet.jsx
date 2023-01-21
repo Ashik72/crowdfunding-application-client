@@ -9,8 +9,6 @@ const FinalStepperDataGet = () => {
     email: stepperFinalData?.email,
   });
 
-  console.log(data);
-
   const userDonateData = {
     fName: stepperFinalData?.fName,
     lName: stepperFinalData?.lName,

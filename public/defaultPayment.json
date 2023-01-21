@@ -1,0 +1,35 @@
+[
+  {
+    "payment": 30
+  },
+  {
+    "payment": 50
+  },
+  {
+    "payment": 100
+  },
+  {
+    "payment": 250
+  },
+  {
+    "payment": 500
+  },
+  {
+    "payment": 750
+  },
+  {
+    "payment": 1000
+  },
+  {
+    "payment": 1250
+  },
+  {
+    "payment": 1500
+  },
+  {
+    "payment": 1750
+  },
+  {
+    "payment": 2000
+  }
+]
