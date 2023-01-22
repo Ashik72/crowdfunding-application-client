@@ -509,6 +509,23 @@ button.subscribe-btn {
 .click-menu-btn {
   border: 2px solid #fff;
 }
+<<<<<<< HEAD
+=======
+.click-menu-btn span {
+  color: #fff;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 5px;
+}
+
+.sticky .click-menu-btn span {
+  color: #000;
+  background-color: #000;
+}
+
+>>>>>>> 28b8f1feb28bf2a2432514164d98f43307395603
 .menu-overly {
   position: fixed;
   width: 100%;
