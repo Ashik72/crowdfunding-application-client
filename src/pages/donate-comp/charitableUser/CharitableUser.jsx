@@ -1,14 +1,14 @@
 import { Step, StepLabel, Stepper } from "@mui/material";
 import React, { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 import FirstStep from "../stepperTwo/FirstStep";
 import SecondStep from "../stepperTwo/SecondStep";
 import FinalStepperDataGet from "../stepperTwo/stepContext/FinalStepperDataGet";
-import { MultiStepContext } from "../stepperTwo/stepContext/StepContext";
 import ThirdStep from "../stepperTwo/ThirdStep";
 
 const CharitableUser = () => {
-  const { currentStepData, stepperFinalData } = useContext(MultiStepContext);
+  const { currentStepData, stepperFinalData } = useContext(AuthContext);
 
   const steps = ["User information", "Billing Information", "Complete"];
 

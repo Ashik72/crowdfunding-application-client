@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
-import { MultiStepContext } from "./stepContext/StepContext";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const FirstStep = () => {
   const { setCurrentStepData, userData, setUserData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
 
   const handleUserDonateData = (event) => {
     event.preventDefault();

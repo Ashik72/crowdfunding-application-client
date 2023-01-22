@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { MultiStepContext } from "./StepContext";
+import { AuthContext } from "../../../../contexts/AuthProvider/AuthProvider";
 
 const FinalStepperDataGet = () => {
-  const { stepperFinalData } = useContext(MultiStepContext);
+  const { stepperFinalData } = useContext(AuthContext);
   const [data, setData] = useState({
     fName: stepperFinalData?.fName,
     lName: stepperFinalData?.lName,

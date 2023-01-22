@@ -2,11 +2,11 @@
     position: relative;
     box-shadow: 0px 0px 8px 0px #242323;
 }
-span{
+.span{
     position: relative;
     /* border-right: 2px solid red; */
 }
-span:after{
+.span:after{
     content: "";
     position: absolute;
     border-right: 4px solid #02a95c;
@@ -16,7 +16,7 @@ span:after{
     right: 0;
     transition: .3s;
 }
-span:hover::after{
+.span:hover::after{
     width: 100%;
     height: 100%;
 }

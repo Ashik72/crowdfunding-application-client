@@ -1,11 +1,11 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import PaymentsTabs from "../paymentTabs/PaymentsTabs";
-import { MultiStepContext } from "./stepContext/StepContext";
 
 const SecondStep = () => {
   const { setCurrentStepData, userData, setUserData, submitStepperFinalData, stepperFinalData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
   const handleUserDonationData = (e) => {
     console.log(userData);
     const cardData = {

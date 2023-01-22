@@ -16,7 +16,7 @@ body {
 }
 
 .main-hero {
-  background-image: url("https://i.ibb.co/Vq7qppG/dsdf.jpg");
+  background-image: url("../../../assets/images/hero.jpg");
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -116,7 +116,7 @@ body {
 
 /* donate-hero-article */
 .donate-hero-article {
-  border: 1px solid #ddd;
+  border: 2px solid #02a95b79;
   padding: 15px;
   transition: 0.5s all ease-in-out;
   position: relative;
@@ -130,6 +130,7 @@ body {
   flex-direction: column;
   z-index: 1;
 }
+
 .donate-hero-article:hover.donate-hero-article::before {
   position: absolute;
   content: "";
@@ -142,6 +143,7 @@ body {
   transform: translate(-50%);
   z-index: -1;
 }
+
 .donate-hero-article:hover.donate-hero-article::after {
   position: absolute;
   content: "";
@@ -155,10 +157,12 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 /* .donate-hero-article:hover {
   background: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
 } */
@@ -167,8 +171,7 @@ body {
   transition: 0.5s all ease-in-out;
   cursor: pointer;
 }
-.hero-top-images {
-}
+
 .hero-top-images img {
   width: 200px;
   height: 200px;
@@ -218,6 +221,7 @@ body {
   transform: translate(-50%);
   z-index: -1;
 }
+
 .play-btn-effect:hover.play-btn-effect::after {
   position: absolute;
   content: "";
@@ -233,6 +237,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -283,6 +288,7 @@ body {
 .contribute-images {
   width: 50%;
 }
+
 .contribute-aricle {
   width: 50%;
   /* padding-left: 150px;
@@ -343,6 +349,7 @@ body {
   max-width: 60%;
   margin: 0 auto;
 }
+
 .subscribe-box input[type="email"] {
   width: 35%;
   margin: 0 auto;
@@ -391,11 +398,12 @@ button.subscribe-btn {
   margin-left: 15px;
   font-size: 17px;
   text-transform: uppercase;
+  transition: .3s;
 }
-
 .sticky {
   padding: 0;
-  background: #fff;
+  background: #eff0ef;
+  color: rgb(0, 0, 0);
   position: fixed !important;
   top: 0;
   left: 0;
@@ -403,41 +411,54 @@ button.subscribe-btn {
   width: 100%;
   transition: 0.5s;
   padding: 5px 0px !important;
+  border-bottom: 4px solid #02a95c;
 }
 
 .sticky .nav-item .nav-link {
-  color: #000;
+  color: rgb(0, 0, 0);
   margin-left: 15px;
+  font-weight: 700;
 }
 
 /* show hidden menu class */
 .logo-show {
   display: inline-block !important;
 }
+
 .logo-show {
   display: none !important;
 }
 
 .nav-donate-btn {
   padding: 15px 30px;
-  border-radius: 50px;
-  box-shadow: 1px 1px 1pc white;
-  background: #fff;
-  color: #000;
-  transition: 0.5s all ease-in-out;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1pc rgba(255, 255, 255, 0.514);
+  background: #02a95c;
+  color: rgb(255, 255, 255);
+  transition: 0.3s all ease-in-out;
   text-transform: capitalize !important;
   position: relative;
   z-index: 1;
+  font-weight: 700;
   overflow: hidden;
+}
+
+.nav-donate-btn:hover {
+  border-radius: 5px;
+  color: white;
 }
 
 .sticky .nav-item .nav-donate-btn {
   padding: 15px 30px;
-  border-radius: 50px;
-  box-shadow: 1px 1px 1pc red;
-  background: #800080;
-  color: #000;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1pc rgb(95, 93, 93);
+  background: #02a95c;
+  color: rgb(255, 254, 254);
   overflow: hidden;
+}
+
+.sticky .nav-item .nav-donate-btn:hover{
+  color: white;
 }
 
 .nav-donate-btn:hover.nav-donate-btn::before {
@@ -452,14 +473,15 @@ button.subscribe-btn {
   transform: translate(-50%);
   z-index: -1;
 }
+
 .nav-donate-btn:hover.nav-donate-btn::after {
   position: absolute;
   content: "";
   inset: 4px;
-  /* border-radius: 5px; */
-  background-color: white;
+  border-radius: 5px;
+  background-color: #202124;
   z-index: -1;
-  border-radius: 50px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -467,6 +489,7 @@ button.subscribe-btn {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -509,7 +532,8 @@ button.subscribe-btn {
 .click-menu-btn {
   border: 2px solid #fff;
 }
-.click-menu-btn span {
+
+.click-menu-btn .span {
   color: #fff;
   width: 20px;
   height: 2px;
@@ -518,7 +542,7 @@ button.subscribe-btn {
   margin: 5px;
 }
 
-.sticky .click-menu-btn span {
+.sticky .click-menu-btn .span {
   color: #000;
   background-color: #000;
 }
@@ -571,6 +595,7 @@ button.subscribe-btn {
   width: 100vh;
   height: 100vh;
 }
+
 .donate-gallery-item {
   min-width: 200px;
   min-height: 200px;
@@ -579,6 +604,7 @@ button.subscribe-btn {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   position: absolute;
 }
+
 .donate-gallery-item img {
   /* max-width: 100%; */
   max-width: 200px;
@@ -592,6 +618,7 @@ button.subscribe-btn {
   top: 10%;
   left: 65%;
 }
+
 .donate-gallery-images-2 {
   top: 45%;
   left: 166%;
@@ -609,6 +636,7 @@ button.subscribe-btn {
   display: inline-block;
   padding-right: 20px;
 }
+
 .img1 {
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -629,6 +657,7 @@ button.subscribe-btn {
   width: 300px;
   object-fit: cover;
 }
+
 .diamond3 {
   display: inline-block;
   padding-right: 20px;
@@ -641,6 +670,7 @@ button.subscribe-btn {
   width: 300px;
   object-fit: cover;
 }
+
 .diamond4 {
   display: inline-block;
   padding-right: 20px;
@@ -654,6 +684,7 @@ button.subscribe-btn {
   width: 300px;
   object-fit: cover;
 }
+
 .diamond5 {
   display: inline-block;
   padding-right: 20px;

@@ -5,8 +5,10 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
   const [dropdown, setDropdown] = useState(false);
   return (
     <div className={`w-[300px] h-full py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all duration-500 ${dashboardToggle ? 'lg:ml-0 ml-[-300px]' : "ml-0"} lg:static absolute z-50`}>
-      <div className='flex justify-between items-center'>
-        <Link className='' to="/"><i className="fa-solid fa-house text-xl transition-all duration-200 mb-4 p-3 hover:bg-[#5764ec] rounded-full"></i></Link>
+      <div className='flex justify-between items-center transition-all duration-200 mb-4 p-3 hover:bg-[#5764ec] rounded-full'>
+        <Link to="/"><i className="fa-solid fa-house text-xl"></i>
+        <span className='text-[18px] ml-1'>HOME</span>
+        </Link>
         <i onClick={()=>setDashboardToggle(!dashboardToggle)} className="fa-solid fa-xmark text-2xl -mt-4 lg:hidden block"></i>
       </div>
       <ul className='grid gap-3'>
@@ -36,12 +38,12 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
           <i className="fa-solid fa-chevron-right ml-2"></i>
         </NavLink>
         <NavLink onClick={() => setDropdown(!dropdown)} className="flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full">
-          <span>
+          <p className='text-gray-200'>
             <i className="fa-solid fa-hand-holding-dollar mr-2"></i>
             <span className=''>Donations</span>
-          </span>
-          {dropdown ? <i className="fa-solid fa-chevron-down ml-2"></i>:
-            <i className="fa-solid fa-chevron-right"></i>}
+          </p>
+          {dropdown ? <i className="fa-solid fa-chevron-down ml-2 text-gray-200"></i>:
+            <i className="fa-solid fa-chevron-right text-gray-200"></i>}
         </NavLink>
         {
           dropdown && <>

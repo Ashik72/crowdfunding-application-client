@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Bkash from "../mobileGet/Bkash";
 import Nagad from "../mobileGet/Nagad";
 import Rocket from "../mobileGet/Rocket";
-import { MultiStepContext } from "../stepperTwo/stepContext/StepContext";
 
 function PaymentsTabs() {
   const [activeTab, setActiveTab] = useState(0);
@@ -11,7 +11,7 @@ function PaymentsTabs() {
   const [renderComp, setRenderComp] = useState("bkash");
 
   const { setCurrentStepData, userData, setUserData } =
-    useContext(MultiStepContext);
+    useContext(AuthContext);
 
   // payment data
   useEffect(() => {
