@@ -38,12 +38,12 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
           <i className="fa-solid fa-chevron-right ml-2"></i>
         </NavLink>
         <NavLink onClick={() => setDropdown(!dropdown)} className="flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full">
-          <span>
+          <p className='text-gray-200'>
             <i className="fa-solid fa-hand-holding-dollar mr-2"></i>
             <span className=''>Donations</span>
-          </span>
-          {dropdown ? <i className="fa-solid fa-chevron-down ml-2"></i>:
-            <i className="fa-solid fa-chevron-right"></i>}
+          </p>
+          {dropdown ? <i className="fa-solid fa-chevron-down ml-2 text-gray-200"></i>:
+            <i className="fa-solid fa-chevron-right text-gray-200"></i>}
         </NavLink>
         {
           dropdown && <>

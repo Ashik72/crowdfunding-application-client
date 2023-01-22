@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
+
+import { Link, NavLink } from "react-router-dom";
+
 import { Link } from "react-router-dom";
+
 import logo2 from '../../assets/logo/logo.png';
 import logo from '../../assets/logo/logo1.png';
 
@@ -62,6 +66,7 @@ const Navbar = () => {
     }
 
     // toggle class
+
     const [isActive, setIsActive] = useState(false);
 
     const toggleClass = () => {
@@ -71,6 +76,71 @@ const Navbar = () => {
     const navItems = (
         <>
             <li className="nav-item">
+
+                <NavLink to="/" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    Home
+                </NavLink>
+            </li>
+
+            <li className="nav-item">
+                <NavLink to="/about" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    About
+                </NavLink>
+            </li>
+
+            <li className="nav-item">
+                <NavLink to="/gallery" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    gallery
+                </NavLink>
+            </li>
+
+            <li className="nav-item">
+                <NavLink to="/blogs" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    Blogs
+                </NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink to="/dashboard/user" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    Dashboard
+                </NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink to="/login" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    Login
+                </NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink to="/signup" className={({ isActive }) =>
+                    isActive
+                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        : "nav-link pb-1"
+                }>
+                    Register
+                </NavLink>
                 <Link to="/" className="nav-link">
                     Home
                 </Link>
@@ -146,6 +216,9 @@ const Navbar = () => {
 
                     <div className="md:hidden block">
                         <button onClick={toggleClass} className="text-white click-menu-btn">
+                            <span className="span"></span>
+                            <span className="span"></span>
+                            <span className="span"></span>
                             <span></span>
                             <span></span>
                             <span></span>
