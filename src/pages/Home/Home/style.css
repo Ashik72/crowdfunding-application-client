@@ -400,6 +400,15 @@ button.subscribe-btn {
   text-transform: uppercase;
   transition: .3s;
 }
+
+.nav-item:hover {
+  border-bottom: 3px solid #02a95c;
+}
+
+.nav-item:last-child:hover {
+  border-bottom: none;
+}
+
 .sticky {
   padding: 0;
   background: #eff0ef;
@@ -536,8 +545,18 @@ button.subscribe-btn {
 
 
 
-
 .sticky .click-menu-btn .span {
+
+.click-menu-btn span {
+  color: #fff;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 5px;
+}
+
+.sticky .click-menu-btn span {
   color: #000;
   background-color: #000;
 }
