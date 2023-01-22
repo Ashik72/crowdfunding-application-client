@@ -61,7 +61,6 @@ const Navbar = () => {
         }
     }
 
-    // toggle class
     const [isActive, setIsActive] = useState(false);
 
     const toggleClass = () => {
