@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
-
 import { Link, NavLink } from "react-router-dom";
-
-import { Link } from "react-router-dom";
-
 import logo2 from '../../assets/logo/logo.png';
 import logo from '../../assets/logo/logo1.png';
 
@@ -65,8 +61,6 @@ const Navbar = () => {
         }
     }
 
-    // toggle class
-
     const [isActive, setIsActive] = useState(false);
 
     const toggleClass = () => {
@@ -76,7 +70,6 @@ const Navbar = () => {
     const navItems = (
         <>
             <li className="nav-item">
-
                 <NavLink to="/" className={({ isActive }) =>
                     isActive
                         ? "nav-link border-b-2 border-[#02A95C] pb-1"
@@ -141,42 +134,6 @@ const Navbar = () => {
                 }>
                     Register
                 </NavLink>
-                <Link to="/" className="nav-link">
-                    Home
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <Link to="/about" className="nav-link">
-                    About
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <Link to="/gallery" className="nav-link">
-                    gallery
-                </Link>
-            </li>
-
-            <li className="nav-item">
-                <Link to="/blogs" className="nav-link">
-                    Blogs
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/dashboard/user" className="nav-link">
-                    Dashboard
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/login" className="nav-link">
-                    Login
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/signup" className="nav-link">
-                    Register
-                </Link>
             </li>
 
             <li className="nav-item flex justify-center items-center">
@@ -219,9 +176,6 @@ const Navbar = () => {
                             <span className="span"></span>
                             <span className="span"></span>
                             <span className="span"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                         </button>
                         <ul
                             className={`my-class navbar-nav flex items-start justify-between flex-col text-black off-canvas-menu px-7 ${isActive ? "off-canvas-canvas-menu-active" : ""

@@ -14,6 +14,7 @@ const SecondStep = () => {
       email: userData.email,
       address: userData.address,
       cardHolderName: userData.cardType,
+      paymentType:userData.payment
     }
     fetch('http://localhost:5000/payment', {
       method: "POST",
