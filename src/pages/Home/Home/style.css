@@ -397,6 +397,7 @@ button.subscribe-btn {
 .navigation .nav-item .nav-link {
   margin-left: 15px;
   font-size: 17px;
+  font-weight: 500;
   text-transform: uppercase;
   transition: .3s;
 }

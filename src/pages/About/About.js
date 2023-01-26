@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   //   const products = [
@@ -66,45 +67,48 @@ export default function About() {
   //   ];
 
   return (
-    <div>
-      {/* About start  */}
-      <div className="">
-        <div class="w-full h-screen bg-white flex flex-wrap">
-          <div class="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
-            <div class="shadow-xl md:shadow-none px-12 py-12 md:pl-0 md:pr-24 bg-white md:-mr-64 relative z-10">
-              <h1 class="mb-8 text-3xl md:text-5xl text-gray-800 text-bold uppercase font-bold tracking-widest leading-tight">
+    <div className="relative">
+       <div className="w-full h-36 absolute top-0 right-0" style={{ background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)" }}>
+
+    </div>
+            {/* About start  */}
+            <div className="">
+        <div className="w-full h-screen bg-white flex flex-wrap">
+          <div className="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
+            <div className="shadow-xl md:shadow-none px-12 py-12 md:pl-0 md:pr-24 bg-white md:-mr-64 relative z-10">
+              <h1 className="mb-8 text-3xl md:text-5xl text-gray-800 text-bold uppercase font-bold tracking-widest leading-tight">
                 ABOUT US
               </h1>
-              <h2 class="text-lg md:text-2xl font-serif text-gray-500">
+              <h2 className="text-lg md:text-2xl font-serif text-gray-500">
                 Helping hands and Helping smiles
               </h2>
 
-              {/* <span class="hidden md:block absolute top-0 right-0 w-48 h-4 bg-blue-900 -mr-24 mt-56"></span> */}
+              {/* <span className="hidden md:block absolute top-0 right-0 w-48 h-4 bg-blue-900 -mr-24 mt-56"></span> */}
             </div>
           </div>
 
-          <div class="-mt-64 md:mt-0 w-full md:flex-1">
+          <div className="-mt-64 md:mt-0 w-full md:flex-1">
             <img
               src="https://www.eastasiaforum.org/wp-content/uploads/2020/11/2020-05-21T000000Z_1636134664_MT1ABCPR731308014_RTRMADP_3_ABACA-PRESS-scaled.jpg"
-              class="w-full h-full object-cover"
+              className="w-full h-full object-cover"
               alt=""
             />
           </div>
         </div>
       </div>
       {/* WHY CHESLSEA?  */}
-      <div class="container mx-auto px-6 flex flex-wrap items-center py-24">
-        <div class="w-full lg:flex-1">
-          <div class="uppercase text-sm text-gray-700 tracking-widest">
+      <div className="container mx-auto px-6 flex flex-wrap items-center py-24">
+        <div className="w-full lg:flex-1">
+          <div className="uppercase text-sm text-gray-700 tracking-widest">
             Why AidHumans?
           </div>
-          <h2 class="text-2xl md:text-4xl font-semibold text-start font-display mt-3">
+          <h2 className="text-2xl md:text-4xl font-semibold text-start font-display mt-3">
             We are changing the way of making things
           </h2>
         </div>
-        <div class="w-full lg:w-auto text-center">
+        <div className="w-full lg:w-auto text-center">
           <svg
-            class="inline-block w-32 h-32 -mb-10 -mt-4 lg:mt-0 lg:mb-0 lg:transform lg:rotate-90 lg:-ml-8"
+            className="inline-block w-32 h-32 -mb-10 -mt-4 lg:mt-0 lg:mb-0 lg:transform lg:rotate-90 lg:-ml-8"
             x="0px"
             y="0px"
             viewBox="0 0 100 125"
@@ -112,7 +116,7 @@ export default function About() {
             <path d="M91.8 45c-3.9 0-5.9 2.3-7.7 4.3-1.7 2-3.2 3.7-6.2 3.7s-4.5-1.7-6.2-3.7C70 47.3 68 45 64 45c-3.9 0-5.9 2.3-7.7 4.3-1.7 2-3.2 3.7-6.2 3.7s-4.5-1.7-6.2-3.7c-1.8-2-3.8-4.3-7.7-4.3-3.9 0-5.9 2.3-7.7 4.3-1.7 2-3.2 3.7-6.2 3.7s-4.5-1.7-6.2-3.7c-1.8-2-3.8-4.3-7.7-4.3-.6 0-1 .4-1 1s.4 1 1 1c3 0 4.5 1.7 6.2 3.7 1.8 2 3.8 4.3 7.7 4.3 3.9 0 5.9-2.3 7.7-4.3 1.7-2 3.2-3.7 6.2-3.7s4.5 1.7 6.2 3.7c1.8 2 3.8 4.3 7.7 4.3 3.9 0 5.9-2.3 7.7-4.3 1.7-2 3.2-3.7 6.2-3.7s4.5 1.7 6.2 3.7c1.8 2 3.8 4.3 7.7 4.3 3.9 0 5.9-2.3 7.7-4.3 1.7-2 3.2-3.7 6.2-3.7.6 0 1-.4 1-1s-.4-1-1-1z" />
           </svg>
         </div>
-        <div class="w-full lg:flex-1">
+        <div className="w-full lg:flex-1">
           <p>
             Let's face it. Many cosmetics are bad for your skin. We use only
             natural ingredients and still provide consistently great tanning
@@ -120,14 +124,61 @@ export default function About() {
           </p>
           <a
             href="#"
-            class="inline-block bg-blue-200 text-white text-sm tracking-widest font-heading px-8 py-4 mt-4"
+            className="inline-block bg-blue-200 text-white text-sm tracking-widest font-heading px-8 py-4 mt-4"
           >
             Learn more
           </a>
         </div>
       </div>
+      <h2 className="text-center uppercase font-display text-lg lg:text-2xl font-bold text-black py-1 md:py-24 px-6">Gallery</h2>
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 grid-rows-none lg:grid-rows-2 gap-8 text-center text-sm uppercase">
+        <div className="col-span-1 row-span-1">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/XvYrMjYt/img7.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
+                <a href="/product" className="block font-semibold text-black mb-1">Shoes</a>
+                <div>£39</div>
+            </div> */}
+        </div>
+        <div className="col-span-1 row-span-1 lg:col-span-2 lg:row-span-2">
+            <div className="w-full h-52 lg:h-96 relative">
+              <img alt="" src="https://i.postimg.cc/wBngWgyX/img16.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="p-6 flex justify-center">
+            <Link to='/gallery'><button className="block mb-4 px-4 py-3 text-sm font-bold rounded-full no-underline hover:shadow-md bg-green-600 text-white">See More</button></Link>
+            </div>
+        </div>
+        <div className="col-span-1 row-span-1">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.ibb.co/Mc2MMS2/flooding.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
+                <a href="/product" className="block font-semibold text-black mb-1">Handbag</a>
+                <div>£39</div>
+            </div> */}
+        </div>
+        <div className="col-span-1 row-span-1">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/6p5WqHxv/img17.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
+                <a href="/product" className="block font-semibold text-black mb-1">Earings</a>
+                <div>£29</div>
+            </div> */}
+        </div>
+        <div className="col-span-1 row-span-1">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/k5YBq0VG/img6.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div class="p-6">
+                <a href="/product" class="block font-semibold text-black mb-1">Autumn Collection</a>
+                <div>£42.56</div>
+            </div> */}
+        </div>
+    </div>
       {/* Start Team members */}
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mt-32">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
           <div>
             <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -437,112 +488,53 @@ export default function About() {
               </div>
             </div>
           </div>
-          {/* <div>
-            <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-                alt="Person"
-              />
-              <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-1 text-lg font-bold text-gray-100">
-                  Sophie Denmo
-                </p>
-                <p className="mb-4 text-xs text-gray-100">Designer</p>
-                <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  Veggies sunt bona vobis, proinde vos postulo esse magis grape
-                  pea.
-                </p>
-                <div className="flex items-center justify-center space-x-3">
-                  <a
-                    href="/"
-                    className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5"
-                    >
-                      <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="/"
-                    className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5"
-                    >
-                      <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <div>
-            <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3931553/pexels-photo-3931553.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt="Person"
-              />
-              <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-1 text-lg font-bold text-gray-100">
-                  Benedict Caro
-                </p>
-                <p className="mb-4 text-xs text-gray-100">Frontend Developer</p>
-                <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  I love cheese, especially airedale queso. Cheese and biscuits
-                  halloumi.
-                </p>
-                <div className="flex items-center justify-center space-x-3">
-                  <a
-                    href="/"
-                    className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5"
-                    >
-                      <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="/"
-                    className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5"
-                    >
-                      <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
+         
         </div>
       </div>
+      {/* STATISTIC Start*/}
+      <section className="text-gray-600 body-font m-16">
+        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+            <div className="w-full sm:p-4 px-4 mb-6">
+              <h1 className="title-font font-medium text-xl mb-2 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+              <div className="leading-relaxed">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
+            </div>
+            <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <h2 className="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+              <p className="leading-relaxed">Users</p>
+            </div>
+            <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <h2 className="title-font font-medium text-3xl text-gray-900">1.8K</h2>
+              <p className="leading-relaxed">Subscribes</p>
+            </div>
+            <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <h2 className="title-font font-medium text-3xl text-gray-900">1.5k</h2>
+              <p className="leading-relaxed">Donate</p>
+            </div>
+            <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+              <h2 className="title-font font-medium text-3xl text-gray-900">6</h2>
+              <p className="leading-relaxed">Volunteers</p>
+            </div>
+          </div>
+          <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+            <img className="object-cover object-center w-full h-full" src="https://i.ibb.co/sPhgBJj/37261-fytlwhyjyb-1467797135.jpg" alt="stats" />
+          </div>
+        </div>
+      </section>
       {/* Testimonials  */}
-      <div class="container mx-auto px-6 py-12">
-        <h2 class="font-display font-semibold text-3xl">
+      <div className="container mx-auto px-6 py-12">
+        <h2 className="font-display font-semibold text-3xl">
           What they are talking about AidHumans.
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 mt-12">
-          <div class="relative">
-            <p class="relative z-10 text-justify">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 mt-12">
+          <div className="relative">
+            <p className="relative z-10 text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div class="relative z-10 text-sm flex items-center justify-end">
+            <div className="relative z-10 text-sm flex items-center justify-end">
               <svg
-                class="inline-block w-32 h-32 -mb-8"
+                className="inline-block w-32 h-32 -mb-8"
                 x="0px"
                 y="0px"
                 viewBox="0 0 100 125"
@@ -552,7 +544,7 @@ export default function About() {
               <span>Elle Spearman</span>
             </div>
             <svg
-              class="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
+              className="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
               viewBox="0 0 95.333 95.332"
             >
               <path
@@ -571,14 +563,14 @@ export default function About() {
               />
             </svg>
           </div>
-          <div class="relative">
-            <p class="relative z-10 text-justify">
+          <div className="relative">
+            <p className="relative z-10 text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div class="relative z-10 text-sm flex items-center justify-end">
+            <div className="relative z-10 text-sm flex items-center justify-end">
               <svg
-                class="inline-block w-32 h-32 -mb-8"
+                className="inline-block w-32 h-32 -mb-8"
                 x="0px"
                 y="0px"
                 viewBox="0 0 100 125"
@@ -588,7 +580,7 @@ export default function About() {
               <span>Elle Spearman</span>
             </div>
             <svg
-              class="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
+              className="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
               viewBox="0 0 95.333 95.332"
             >
               <path
@@ -607,14 +599,14 @@ export default function About() {
               />
             </svg>
           </div>
-          <div class="relative">
-            <p class="relative z-10 text-justify">
+          <div className="relative">
+            <p className="relative z-10 text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div class="relative z-10 text-sm flex items-center justify-end">
+            <div className="relative z-10 text-sm flex items-center justify-end">
               <svg
-                class="inline-block w-32 h-32 -mb-8"
+                className="inline-block w-32 h-32 -mb-8"
                 x="0px"
                 y="0px"
                 viewBox="0 0 100 125"
@@ -624,7 +616,7 @@ export default function About() {
               <span>Elle Spearman</span>
             </div>
             <svg
-              class="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
+              className="absolute top-0 left-0 w-28 h-28 -mt-10 -ml-8 opacity-5"
               viewBox="0 0 95.333 95.332"
             >
               <path
@@ -646,18 +638,18 @@ export default function About() {
         </div>
       </div>
       {/* Subscribe  */}
-      <div class="w-full py-24 relative">
-        <div class="bg-gray-300 max-w-3xl text-center relative z-20 mx-auto py-6">
-          <h3 class="text-2xl mb-4">Subscribe Us</h3>
-          <p class="text-sm mb-6">For news updates and promotional events</p>
+      <div className="w-full py-24 relative">
+        <div className="bg-gray-300 max-w-3xl text-center relative z-20 mx-auto py-6">
+          <h3 className="text-2xl mb-4">Subscribe Us</h3>
+          <p className="text-sm mb-6">For news updates and promotional events</p>
 
-          <form class="flex w-full max-w-xs mx-auto">
+          <form className="flex w-full max-w-xs mx-auto">
             <input
               type=""
-              class="h-12 flex-1 py-2 px-4"
+              className="h-12 flex-1 py-2 px-4"
               placeholder="Email address"
             />
-            <button class="h-12 w-24 bg-gray-900 text-white text-sm uppercase ml-2">
+            <button className="h-12 w-24 bg-gray-900 text-white text-sm uppercase ml-2">
               Subscribe
             </button>
           </form>
@@ -665,46 +657,9 @@ export default function About() {
 
         <img
           src="https://www.ohchr.org/sites/default/files/styles/hero_image_1/public/2022-08/Garment-workers-bangladesh.jpg?itok=uPgEW1cp"
-          class="absolute top-0 left-0 w-full h-full object-cover z-10"
+          className="absolute top-0 left-0 w-full h-full object-cover z-10"
         />
       </div>
-      {/* <div className="bg-white">
-        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Customers also purchased
-          </h2>
-
-          <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <div key={product.id} className="group relative">
-                <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-                  <img
-                    src={product.imageSrc}
-                    alt={product.imageAlt}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                  />
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.name}
-                      </a>
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500">
-                      {product.color}
-                    </p>
-                  </div>
-                  <p className="text-sm font-medium text-gray-900">
-                    {product.price}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

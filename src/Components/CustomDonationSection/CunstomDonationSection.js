@@ -3,33 +3,33 @@ import "./CustomDonationSection.css";
 import bg from "../../Components/assets/child help/1.jpg";
 const CunstomDonationSection = () => {
   return (
-    <div className="bg-[#02a95c]  text-white">
+    <div className="bg-[#02a95c] mt-[14 50px] sm:mt-[1100px] md:mt-[650px] lg:mt-[0px]  text-white overflow-x-hidden">
       <div className="grid max-w-[100%] lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-        <div className="p-[60px]">
+        <div className="">
           <div className="divider mb-7 text-xl font-semibold  before:bg-white after:bg-white">
             Make A Donation
           </div>
           <h1 className="text-4xl mb-16 font-bold">
             Need Pure Water For <br /> Mozambique People
           </h1>
-          <div className="grid sm:grid-cols-1 md:grid-cols-4  lg:grid-cols-4  gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4  lg:grid-cols-4 gap-2 px-2">
             <input
-              className="custom_button cursor-pointer"
-              type="submit"
+              className="custom_button custom_outline cursor-pointer px-2"
+              type="button"
               value="200৳"
             />
             <input
-              className="custom_button custom_outline cursor-pointer"
-              type="submit"
+              className="custom_button custom_outline cursor-pointer px-2"
+              type="button"
               value="500৳"
             />
             <input
-              className="custom_button custom_outline cursor-pointer"
-              type="submit"
+              className="custom_button custom_outline cursor-pointer px-2"
+              type="button"
               value="1000৳"
             />
             <input
-              className="custom_button custom_outline cursor-pointer"
+              className="custom_button custom_outline cursor-pointer px-2"
               type="text"
               placeholder="Custom"
             />

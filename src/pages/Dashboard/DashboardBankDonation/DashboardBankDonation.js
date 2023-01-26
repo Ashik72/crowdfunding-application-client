@@ -22,7 +22,7 @@ const DashboardBankDonation = () => {
               <p className='font-semibold'>{eye ? <span>$300</span> : <span>*****</span>}</p>
               <span className='cursor-pointer' onClick={() => setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>
@@ -38,7 +38,7 @@ const DashboardBankDonation = () => {
               <p className='font-semibold'>{eye ? <span>$300</span> : <span>*****</span>}</p>
               <span className='cursor-pointer' onClick={() => setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>
@@ -54,7 +54,7 @@ const DashboardBankDonation = () => {
               <p className='font-semibold'>{eye ? <span>$300</span> : <span>*****</span>}</p>
               <span className='cursor-pointer' onClick={() => setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>

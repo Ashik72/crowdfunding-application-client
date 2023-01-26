@@ -509,9 +509,7 @@ button.subscribe-btn {
 .click-menu-btn {
   border: 2px solid #fff;
 }
-<<<<<<< HEAD
-=======
-.click-menu-btn span {
+<<<<<<< HEAD ======= .click-menu-btn span {
   color: #fff;
   width: 20px;
   height: 2px;
@@ -525,8 +523,7 @@ button.subscribe-btn {
   background-color: #000;
 }
 
->>>>>>> 28b8f1feb28bf2a2432514164d98f43307395603
-.menu-overly {
+>>>>>>>28b8f1feb28bf2a2432514164d98f43307395603 .menu-overly {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -711,9 +708,4 @@ button.subscribe-btn {
   height: 300px;
   width: 300px;
   object-fit: cover;
-}
-
-/* payment tab active */
-.active {
-  color: #000 !important;
 }

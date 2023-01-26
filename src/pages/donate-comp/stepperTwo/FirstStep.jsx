@@ -3,8 +3,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const FirstStep = () => {
-  const { setCurrentStepData, userData, setUserData } =
-    useContext(AuthContext);
+  const { setCurrentStepData, userData, setUserData } = useContext(AuthContext);
 
   const handleUserDonateData = (event) => {
     event.preventDefault();
@@ -239,6 +238,10 @@ const FirstStep = () => {
           </div>
 
           <Button
+            sx={{
+              backgroundColor: "#02A95C",
+              "&:hover": { backgroundColor: "#15803D" },
+            }}
             variant="contained"
             onClick={() => setCurrentStepData(2)}
             style={{ margin: "25px 0" }}

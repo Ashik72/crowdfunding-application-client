@@ -9,9 +9,9 @@ function PaymentsTabs() {
   const [defaultPayment, setDefaultPayment] = useState([]);
   const [btnPayment, setBtnPayment] = useState([]);
   const [renderComp, setRenderComp] = useState("bkash");
+  const [paymentSingleObj, setPaymentSingleObj] = useState([]);
 
-  const { setCurrentStepData, userData, setUserData } =
-    useContext(AuthContext);
+  const { setCurrentStepData, userData, setUserData } = useContext(AuthContext);
 
   // payment data
   useEffect(() => {
@@ -26,7 +26,6 @@ function PaymentsTabs() {
   };
 
   // btn value catch
-
   const handlePaymentClick = (payment) => {
     setBtnPayment(payment?.payment);
   };
@@ -38,6 +37,51 @@ function PaymentsTabs() {
   };
 
   // console.log(renderComp);
+
+  const bkashData = {
+    paymentType: "bKash",
+    paymentId: "",
+    number: "",
+  };
+
+  const rocketData = {
+    paymentType: "Rocket",
+    paymentId: "",
+    number: "",
+  };
+
+  const nagadData = {
+    paymentType: "Nagad",
+    paymentId: "",
+    number: "",
+  };
+
+  // renderComp === "bkash" ? <Bkash /> : null;
+
+  // if (renderComp === "bkash") {
+  //   return <h1>Hello world</h1>;
+  // } else if (renderComp === "rocket") {
+  //   return <h1>Hello world, Congratulations </h1>;
+  // } else if (renderComp === "nagad") {
+  //   return <h1>Hello world, How are you?</h1>;
+  // }
+
+  // switch (renderComp) {
+  //   case "bkash":
+  //     setPaymentSingleObj(bkashData);
+  //     break;
+
+  //   case "rocket":
+  //     console.log(rocketData);
+  //     break;
+
+  //   case "nagad":
+  //     console.log(nagadData);
+  //     break;
+
+  //   default:
+  //     break;
+  // }
 
   return (
     <div className="max-w-[90%] mx-auto">
@@ -69,7 +113,7 @@ function PaymentsTabs() {
             <ul className="flex items-center justify-center flex-wrap my-6">
               {defaultPayment?.map((payment) => (
                 <li
-                  className="bg-purple-600 py-3 px-5 rounded-lg text-white mx-2 cursor-pointer hover:bg-purple-700 my-2"
+                  className="bg-green-600 py-3 px-5 rounded-lg text-white mx-2 cursor-pointer hover:bg-green-700 my-2 transition-all"
                   onClick={() => handlePaymentClick(payment)}
                 >
                   {payment?.payment}$

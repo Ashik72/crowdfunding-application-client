@@ -7,8 +7,6 @@ import PopularCatagories from "../../../Components/PopularCatagories/PopularCata
 import Volunteers from "../../../Components/Volunteers/Volunteers";
 import HeroSection from "../../HeroSection/HeroSection";
 import FirstSection from "../../FirstSection/FirstSection";
-// import HeroSection from "../../HeroSection/HeroSection";
-// import NeedMoreHelp from '../../NeedMoreHelp/NeedMoreHelp';
 import './style.css'
 const Home = () => {
   return (
@@ -19,11 +17,7 @@ const Home = () => {
       <PopularCatagories></PopularCatagories>
       <PoorFundActiveMember></PoorFundActiveMember>
       <JoinRecentEvent></JoinRecentEvent>
-      {/* <ContactUs></ContactUs> */}
       <Volunteers></Volunteers>
-      {/* <br /> */}
-      {/* <FirstSection></FirstSection> */}
-      {/* <NeedMoreHelp></NeedMoreHelp> */}
     </div>
   );
 };

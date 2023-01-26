@@ -32,7 +32,7 @@ const Blogs = () => {
 
             {/* card section  */}
             <section className='mt-28'>
-                <div className='lg:grid grid-cols-3' data-aos-duration="3000">
+                <div className='lg:grid grid-cols-3 justify-items-center' data-aos-duration="3000">
                     {
                         blogsCard.map(blogCard => <BlogsCard
                             key={blogCard.id}

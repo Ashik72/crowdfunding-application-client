@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import img from "../../../assets/images/1.jpg"
 const DashboardActivities = () => {
   const [eye, setEye] = useState(true);
-  const [data,setData]=useState()
-  useEffect(() => {
-    fetch("fakedata.json")
-      .then(res => res.json())
-      .then(data => setData(data))
-  }, []);
-  console.log("data");
   return (
     <div className='w-full p-6 bg-gray-200 overflow-x-scroll '>
       <h1 className=' text-2xl font-serif text-gray-800 text-center mb-3'>Recent Donation Activity</h1>
@@ -30,7 +23,7 @@ const DashboardActivities = () => {
               <p className='font-semibold'>{eye ? <span>$300</span>:<span>*****</span>}</p>
               <span className='cursor-pointer' onClick={()=>setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>
@@ -46,7 +39,7 @@ const DashboardActivities = () => {
               <p className='font-semibold'>{eye ? <span>$300</span>:<span>*****</span>}</p>
               <span className='cursor-pointer' onClick={()=>setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>
@@ -62,7 +55,7 @@ const DashboardActivities = () => {
               <p className='font-semibold'>{eye ? <span>$300</span>:<span>*****</span>}</p>
               <span className='cursor-pointer' onClick={()=>setEye(!eye)}>
                 {eye ? <i className="fa-solid fa-eye text-blue-800"></i> :
-                  <i class="fa-solid fa-eye-slash text-blue-800"></i>}
+                  <i className="fa-solid fa-eye-slash text-blue-800"></i>}
               </span>
             </div>
           </div>

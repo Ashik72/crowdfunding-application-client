@@ -1,7 +1,7 @@
 .custom-border {
     box-shadow: 0px 0px 4px 0px #02a95c;
     margin-bottom: 25px;
-    transition: .7s !important;    
+    transition: .7s !important;
 }
 
 .box img {
@@ -13,15 +13,51 @@
     transition: .5s;
 }
 
-.youtube {
-    box-shadow: 1px 1px 10px 1px #02a95c;
-    border-radius: 50px;
-    transition: .3s;
+.join_img {
+    position: relative;
+    width: 100%;
+    z-index: 0;
 }
 
-.youtube:hover {
-    color: #02a95c;
-    background: red;
-    transform: scale(1.5);
-    /* width: 50%; */
+.join_img::after {
+    /* border-radius: 150px 0px 100px 0px; */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0a0b0b93;
+    z-index: 1;
 }
+
+.custom__reactIcon {
+    z-index: 15 !important;
+}
+
+.join_img .custom__reactIcon {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    border-radius: 150px;
+    box-shadow: 0px 0px 4px 0px #02a95c;
+}
+
+.custom__reactIcon:hover {
+    background: #02a95c;
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+.video-icons-animations {
+    animation: project-btn-animation 2s infinite;
+    border-radius: 100%;
+  }
+  @keyframes project-btn-animation {
+    0% {
+      box-shadow: 0 0 0 0 #ffffff;
+    }
+    100% {
+      box-shadow: 0 0 0 15px transparent;
+    }
+  }

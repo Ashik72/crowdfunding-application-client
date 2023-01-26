@@ -12,8 +12,8 @@ import DashboardUser from "../pages/Dashboard/DashboardUser/DashboardUser";
 import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
-import Signin from "../pages/Signin/Signin";
-import Signup from "../pages/Signup/Signup";
+import LogIn from "../pages/LogIn/LogIn";
+import Register from "../pages/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -40,17 +40,18 @@ export const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery></Gallery>,
       },
+      
       {
         path: "/about",
         element: <About></About>,
       },
       {
         path: "/login",
-        element:<Signin/>,
+        element:<LogIn />
       },
       {
-        path: "/signup",
-        element:<Signup/>,
+        path: "/register",
+        element:<Register />
       },
       {
         path: "/donate",

@@ -37,7 +37,16 @@ const ThirdStep = () => {
             Congratulations
           </h2>
           <h3>Your payment is successful!</h3>{" "}
-          <Button variant="contained " onClick={() => setCurrentStepData(1)}>
+          <Button
+            variant="contained "
+            onClick={() => setCurrentStepData(1)}
+            sx={{
+              backgroundColor: "#02A95C",
+              color: "#fff",
+              mt: 1,
+              "&:hover": { backgroundColor: "#15803D" },
+            }}
+          >
             Close
           </Button>
         </div>

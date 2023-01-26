@@ -24,7 +24,7 @@ const Volunteers = () => {
                 </div>
             </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                <div class="card">
+                <div class="card_volunteers">
                     <div class="card-top"
                         style={{ backgroundImage: `url(${topCoverImages})` }}
                     >
@@ -33,7 +33,7 @@ const Volunteers = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card_volunteers">
                     <div class="card-top"
                         style={{ backgroundImage: `url(${topCoverImages2})` }}
                     >
@@ -42,7 +42,7 @@ const Volunteers = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card_volunteers">
                     <div class="card-top"
                         style={{ backgroundImage: `url(${topCoverImages3})` }}
                     >
@@ -51,7 +51,7 @@ const Volunteers = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card_volunteers">
                     <div class="card-top"
                         style={{ backgroundImage: `url(${topCoverImages4})` }}
                     >

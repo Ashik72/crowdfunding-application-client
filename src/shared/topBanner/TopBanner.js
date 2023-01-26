@@ -7,7 +7,7 @@ const TopBanner = ({ children }) => {
             style={{ backgroundImage: `url(${topCoverImages})` }}
             className="top-banner bg-no-repeat bg-bottom  bg-cover w-full h-full py-48 text-center"
         >
-            <h2 className="font-bold text-5xl text-white">{children}</h2>
+            <h2 className="font-bold text-4xl text-white">{children}</h2>
         </div>
     );
 };

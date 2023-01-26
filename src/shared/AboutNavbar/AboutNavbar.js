@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo2 from '../../assets/logo/logo.png';
 import logo from '../../assets/logo/logo1.png';
 
-const Navbar = () => {
+const AboutNavbar = () => {
     //   window.addEventListener("scroll", () => {
     //     var navigation = document.querySelector(".nav");
     //     navigation.classList.toggle("sticky", window.scrollY > 0);
@@ -127,7 +127,7 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li className="nav-item">
-                <NavLink to="/register" className={({ isActive }) =>
+                <NavLink to="/signup" className={({ isActive }) =>
                     isActive
                         ? "nav-link border-b-2 border-[#02A95C] pb-1"
                         : "nav-link pb-1"
@@ -203,4 +203,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default AboutNavbar;
