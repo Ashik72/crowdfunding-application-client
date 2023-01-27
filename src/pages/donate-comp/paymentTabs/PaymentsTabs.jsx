@@ -33,7 +33,7 @@ function PaymentsTabs() {
   // mobile banking payment
   const handleMobileBankingPayment = (e) => {
     const bankingValue = e.target.value;
-    setRenderComp(bankingValue);
+    setUserData({...userData, paymentMethod: bankingValue })
   };
 
   // console.log(renderComp);

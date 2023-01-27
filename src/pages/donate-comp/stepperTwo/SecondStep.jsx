@@ -5,6 +5,7 @@ import PaymentsTabs from "../paymentTabs/PaymentsTabs";
 
 const SecondStep = () => {
   const {
+    user,
     setCurrentStepData,
     userData,
     setUserData,
@@ -21,8 +22,9 @@ const SecondStep = () => {
       address: userData.address,
       cardHolderName: userData.cardType,
       paymentType: userData.payment,
+      image:user?.photoURL
     };
-    fetch("http://localhost:5000/payment", {
+    fetch("https://croudfunding-server-muradwahid.vercel.app/payment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
 import { FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import logo2 from '../../assets/logo/logo.png';
 import logo from '../../assets/logo/logo1.png';
+import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const Navbar = () => {
     //   window.addEventListener("scroll", () => {
     //     var navigation = document.querySelector(".nav");
     //     navigation.classList.toggle("sticky", window.scrollY > 0);
     //   });
-
+    const {logOut,user } = useContext(AuthContext);
     const [className, setClassName] = useState("");
     const [logoHidden, setLogoHidden] = useState("");
     const [logoShow, setLogoShow] = useState("");
@@ -117,24 +119,36 @@ const Navbar = () => {
                     Dashboard
                 </NavLink>
             </li>
-            <li className="nav-item">
-                <NavLink to="/login" className={({ isActive }) =>
-                    isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
-                        : "nav-link pb-1"
-                }>
-                    Login
-                </NavLink>
-            </li>
-            <li className="nav-item">
-                <NavLink to="/register" className={({ isActive }) =>
-                    isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
-                        : "nav-link pb-1"
-                }>
-                    Register
-                </NavLink>
-            </li>
+            {
+                user?.uid ?<>
+                    <li className="nav-item">
+                        <NavLink onClick={logOut} to="/register" className={({ isActive }) =>
+                            isActive
+                                ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                                : "nav-link pb-1"
+                        }>
+                            Logout
+                        </NavLink>
+                    </li>
+                </> :<><li className="nav-item">
+                    <NavLink to="/login" className={({ isActive }) =>
+                        isActive
+                            ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                            : "nav-link pb-1"
+                    }>
+                        Login
+                    </NavLink>
+                </li>
+                    <li className="nav-item">
+                        <NavLink to="/register" className={({ isActive }) =>
+                            isActive
+                                ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                                : "nav-link pb-1"
+                        }>
+                            Register
+                        </NavLink>
+                    </li></>
+            }
 
             <li className="nav-item flex justify-center items-center">
                 <Link to="/donate" className="nav-link">

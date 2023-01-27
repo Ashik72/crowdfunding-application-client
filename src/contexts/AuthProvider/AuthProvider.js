@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
 export const AuthContext = createContext();
@@ -18,7 +18,9 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
-
+    const signInPopUp = (provider) => {
+        return signInWithPopup(auth, provider);
+    }
     const modernizeProfile = (profile) => {
         return updateProfile(auth.currentUser, profile);
     }
@@ -52,7 +54,7 @@ const AuthProvider = ({ children }) => {
 //Rakibul islam donation context end
 
     const authInfo = {
-        user, loading, createUser, login, logOut, modernizeProfile, currentStepData,
+        user, loading, createUser, login, logOut, signInPopUp, modernizeProfile, currentStepData,
         setCurrentStepData,
         userData,
         setUserData,
