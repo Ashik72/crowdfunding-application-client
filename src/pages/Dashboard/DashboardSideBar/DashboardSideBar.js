@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
   const [dropdown, setDropdown] = useState(false);
+  const {user} = useContext(AuthContext);
   return (
-    <div className={`w-[300px] h-full lg:block hidden py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all duration-500 ${dashboardToggle ? 'lg:ml-0 ml-[-300px]' : "ml-0"} lg:static absolute z-50`}>
+    <div className={`w-[320px] h-full lg:block hidden py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all duration-500 ${dashboardToggle ? 'lg:ml-0 ml-[-300px]' : "ml-0"} lg:static absolute z-50`}>
       <div className='flex justify-between items-center transition-all duration-200 mb-4 p-3 hover:bg-[#5764ec] rounded-full'>
         <Link to="/"><i className="fa-solid fa-house text-xl"></i>
         <span className='text-[18px] ml-1'>HOME</span>
@@ -33,7 +35,7 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
           
           <p>
             <i className="fa-solid fa-user-tie mr-2"></i>
-            <span className=''>Murad Wahid</span>
+            <span className=''>{user?.displayName}</span>
           </p>
           <i className="fa-solid fa-chevron-right ml-2"></i>
         </NavLink>
