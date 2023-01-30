@@ -1,16 +1,33 @@
-import React, { useState } from 'react';
-import {Link, NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import {Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
+  const { user, logOut } = useContext(AuthContext)
+  const navigate=useNavigate()
   const [dropdown, setDropdown] = useState(false);
+  const handleDashboardLogOut = () => {
+    logOut()
+    navigate('/')
+
+  }
   return (
     <div className={`w-[300px] h-full lg:block hidden py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all duration-500 ${dashboardToggle ? 'lg:ml-0 ml-[-300px]' : "ml-0"} lg:static absolute z-50`}>
-      <div className='flex justify-between items-center transition-all duration-200 mb-4 p-3 hover:bg-[#5764ec] rounded-full'>
+      <div className='flex justify-between items-center transition-all duration-200 p-3 hover:bg-[#5764ec] rounded-full'>
         <Link to="/"><i className="fa-solid fa-house text-xl"></i>
         <span className='text-[18px] ml-1'>HOME</span>
         </Link>
         <i onClick={()=>setDashboardToggle(!dashboardToggle)} className="fa-solid fa-xmark text-2xl -mt-4 lg:hidden block"></i>
       </div>
+      {
+        user?.uid && <div className='flex gap-3 items-center my-2 ml-2'>
+          <img className='rounded-full w-10 h-10' src={user?.photoURL} alt="" />
+          <div>
+            <p className='text-[14px]'>{user?.displayName}</p>
+            <p className='text-[11px]'>Admin</p>
+          </div>
+        </div>
+      }
       <ul className='grid gap-3'>
 
         <NavLink to="overview" className={({ isActive}) =>
@@ -57,11 +74,11 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
                 ? "ml-8 flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
                 : "ml-8 flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
             }>Bank Donation</NavLink>
-            {/* <NavLink to="carddonate" className={({ isActive }) =>
+            <NavLink to="carddonate" className={({ isActive }) =>
               isActive
                 ? "ml-8 flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
                 : "ml-8 flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
-            }>Bkash Donation</NavLink> */}
+            }>Bkash Donation</NavLink>
           </>
         }
         <NavLink to="donors" className={({ isActive, isPending }) =>
@@ -75,7 +92,7 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
           </span>
           <i className="fa-solid fa-chevron-right ml-2"></i>
         </NavLink>
-        {/* <NavLink to="admin" className={({ isActive, isPending }) =>
+        <NavLink to="admin" className={({ isActive, isPending }) =>
           isActive
             ? "flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
             : "flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
@@ -85,7 +102,11 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
             <span>Admin</span>
           </span>
           <i className="fa-solid fa-chevron-right ml-2"></i>
-        </NavLink> */}
+        </NavLink>
+        <li onClick={handleDashboardLogOut} className='flex items-center gap-2 ml-2 mt-3 cursor-pointer hover:text-red-700'>
+          <i className="fa-solid fa-arrow-up-from-bracket text-red-700 text-[20px]"></i>
+          <p>Log Out</p>
+        </li>
       </ul>
     </div>
   );

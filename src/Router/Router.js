@@ -6,6 +6,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
+import DashboardAdmin from "../pages/Dashboard/DashboardAdmin/DashboardAdmin";
 import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
 import DashboardDonors from "../pages/Dashboard/DashboardDonors/DashboardDonors";
 import DashboardOverview from "../pages/Dashboard/DashboardOverview/DashboardOverview";
@@ -65,12 +66,12 @@ export const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       { path: "/dashboard", element: <Dashboard /> },
-      // {path:"overview",element:<DashboardOverview/>},
       { path: "user", element: <DashboardUser /> },
       { path: "activity", element: <DashboardActivities /> },
       { path: "bankdonors", element: <DashboardBankDonation /> },
       { path: "donors", element: <DashboardDonors /> },
-      {path:"overview",element:<DashboardOverview/>}
+      { path: "overview", element: <DashboardOverview /> },
+      {path:"admin",element:<DashboardAdmin/>}
     ],
   },
 ]);

@@ -15,3 +15,13 @@
   margin-left: -30px;
   box-shadow: 10px 10px white ;
 }
+.donation-shadow{
+  box-shadow: -1px 0px 8px 0px #5764ec;
+  z-index: 10;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+.donation-shadow:hover{
+  z-index: 100;
+  transform: scale(1.2);
+}

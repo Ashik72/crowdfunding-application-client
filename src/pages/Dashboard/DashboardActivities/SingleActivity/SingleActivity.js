@@ -6,7 +6,7 @@ const SingleActivity = (data) => {
   const { fullName, amount, email, address, cardHolderName, paymentType, image } = data.data;
   console.log(data.data);
   return (
-    <div className='w-40 border rounded-t-[10px] h-60 relative bg-white'>
+    <div className='w-40 border rounded-t-[10px] h-60 relative bg-gray-300 donation-shadow'>
       <div>
         <img className='h-24 w-40 object-cover rounded-t-[10px]' src={image} alt="" />
       </div>

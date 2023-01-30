@@ -13,7 +13,7 @@ const DashboardBankDonation = () => {
       })
   }, [])
   return (
-    <div className='w-full p-6 bg-gray-200 '>
+    <div className='w-full p-6 bg-[#04061a] overflow-x-scroll mb-16'>
       <h2 className='text-2xl font-serif text-gray-800 text-center mb-3 -ml-12'>Bank Donation</h2>
       <div className='flex items-center font-serif mb-3'>
         <hr className='w-[42%] border-gray-500' />
