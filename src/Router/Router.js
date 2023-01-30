@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
 import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
 import DashboardDonors from "../pages/Dashboard/DashboardDonors/DashboardDonors";
+import DashboardOverview from "../pages/Dashboard/DashboardOverview/DashboardOverview";
 import DashboardUser from "../pages/Dashboard/DashboardUser/DashboardUser";
 import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
@@ -69,6 +70,7 @@ export const router = createBrowserRouter([
       { path: "activity", element: <DashboardActivities /> },
       { path: "bankdonors", element: <DashboardBankDonation /> },
       { path: "donors", element: <DashboardDonors /> },
+      {path:"overview",element:<DashboardOverview/>}
     ],
   },
 ]);

@@ -77,7 +77,7 @@ const data = [
 ];
 const DashboardOverview = () => {
   return (
-    <div className='bg-gray-200 w-full p-6 overflow-y-scroll'>
+    <div className='bg-[#04061a] w-full p-6 overflow-y-scroll'>
       <div className='w-[90%] mx-auto mb-5'>
         <h1 className='text-xl text-gray-700 font-bold mb-6'>Dashboard</h1>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
@@ -95,8 +95,8 @@ const DashboardOverview = () => {
           </div>
         </div>
       </div>
-      <span className='w-[90%] mx-auto ml-32 z-0'>
-        <ResponsiveContainer width="90%" height="60%">
+      <span className='w-[90%] mx-auto ml-32 z-0 bg-slate-100'>
+        <ResponsiveContainer width="80%" height="60%">
           <BarChart
             width={500}
             height={300}
@@ -109,10 +109,11 @@ const DashboardOverview = () => {
             }}
             barSize={20}
           >
-            <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+            <XAxis dataKey="name" scale="point" padding={{ left: 5, right: 5 }} />
             <YAxis />
             <Tooltip />
             <CartesianGrid strokeDasharray="3 3" />
+
             <Bar dataKey="donate" fill="#8884d8" background={{ fill: '#fff' }} />
           </BarChart>
         </ResponsiveContainer>

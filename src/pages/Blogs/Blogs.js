@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import BlogsCard from './BlogsCard';
-import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaInstagramSquare, FaEnvelopeOpenText, FaPhoneVolume, FaMapMarkerAlt } from "react-icons/fa";
 import './Blogs.css';
 import Loading from '../Loading/Loading';
 
@@ -12,14 +11,14 @@ const Blogs = () => {
         fetch('https://code-kids-project-server.vercel.app/blogs')
             .then(res => res.json())
             .then(data => {
-                setLoading(false);
+                // setLoading(false);
                 setBlogsCard(data)
             })
     }, [])
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
 
     return (
         <div>

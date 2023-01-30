@@ -1,14 +1,39 @@
-import React, { useState } from 'react'
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 function LogIn() {
   const {register, formState: { errors }, handleSubmit} = useForm();
-  
+  const { signInPopUp } = useContext(AuthContext);
+  const googleProvider=new GoogleAuthProvider()
   const handleLogin = data => {
     console.log(data);
   }
-
+  const googleSignIn = () => {
+    signInPopUp(googleProvider)
+      .then(result => {
+        const googleUser = result.user;
+        console.log(googleUser);
+        const userData = {
+          name: googleUser.displayName,
+          email: googleUser.email,
+          image: googleUser.photoURL,
+        }
+        console.log(userData);
+          fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {
+              "content-type":"application/json"
+            },
+            body:JSON.stringify(userData)
+          })
+          .then(res=>res.json())
+          .then(data=>console.log(data))
+      })
+    .catch(err=>console.log(err))
+  }
   return (
     <div className='h-[800px] flex justify-center items-center py-40 relative'>
             <div className="w-full h-36 absolute top-0 right-0" style={{ background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)" }}>
@@ -51,7 +76,7 @@ function LogIn() {
     {/* React form hook ends here  */}
     <p className='text-sm'>New to AidHumans? <Link className='text-primary' to='/signup'>Create an new account</Link></p>
     <div className='divider'>OR</div>
-    <button className="btn btn-outline btn-secondary w-full font-bold">Continue with Google</button>
+    <button onClick={googleSignIn} className="btn btn-outline btn-secondary w-full font-bold">Continue with Google</button>
     <button className="btn btn-outline btn-primary w-full font-bold mt-3">Continue with Facebook</button>
       </div>
     </div>

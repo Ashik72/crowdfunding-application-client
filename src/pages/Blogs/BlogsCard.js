@@ -12,9 +12,9 @@ const BlogsCard = ({ blogCard }) => {
 
       <PhotoProvider>
         <PhotoView src={image}>
-          <figure className='relative'>
-            <img className='w-full h-64' src={image} style={{ cursor: 'pointer', objectFit: 'cover' }} alt="Shoes" />
-            <div className='-bottom-4 z-10 left-5 absolute'>
+          <figure className='relative' style={{ overflow: 'inherit' }}>
+            <img className='w-full h-64 rounded-t-xl' src={image} style={{ cursor: 'pointer', objectFit: 'cover'}} alt="Shoes" />
+            <div className='-bottom-[19px] z-10 left-5 absolute'>
               <img className='w-10 border rounded-full' src={donate} alt="" />
             </div>
           </figure>

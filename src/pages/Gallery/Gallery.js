@@ -23,6 +23,7 @@ import React from "react";
 // import img21 from "../../images/img21.jpg";
 // import heartImg from "../../images/heart01.png";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import { Link } from "react-router-dom";
 
 import "./Gallery.css";
 
@@ -225,12 +226,13 @@ const Gallery = () => {
           join with us.
         </h1>
 
-        <button
+        <Link
+          to="/donate"
           className="btn mt-8 bg-gradient-to-r from-green-600 to-teal-600 hover:scale-110"
           data-aos="fade-up"
         >
           Donate Now
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Volunteers.css'
-const topCoverImages = "https://scontent.fspd3-1.fna.fbcdn.net/v/t39.30808-6/273833713_479128367263328_4755964244916512252_n.jpg?stp=dst-jpg_s206x206&_nc_cat=103&ccb=1-7&_nc_sid=da31f3&_nc_ohc=NPvPApU85kMAX83_1-f&_nc_ht=scontent.fspd3-1.fna&oh=00_AfA0GNGmLDBNbPhM-dEfciAQCXRcEiDell_tydjqpzb1yA&oe=63CFCEC3"
+import topCoverImages from "../../assets/images/rocky.jpg"
 const topCoverImages2 = "https://media.discordapp.net/attachments/1060927608461733892/1063094215313195198/IMG_20220516_110422_2.jpg?width=326&height=427";
 const topCoverImages3 = "https://media.discordapp.net/attachments/1060927608461733892/1063099175773949982/pink-gradient-designify-1.png?width=427&height=427"
 const topCoverImages4 = "https://media.discordapp.net/attachments/1062246181016711188/1065929654965387364/01516789576.JPG?width=336&height=427"

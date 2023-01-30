@@ -1,0 +1,17 @@
+.dashboardUserImgParent{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  top:11px
+}
+.dashboardUserImg{
+  transform: rotate(-45deg);
+  max-width: 224px !important;
+  height: 224px;
+  object-fit: cover;
+  margin-top: -32px;
+  margin-left: -30px;
+  box-shadow: 10px 10px white ;
+}

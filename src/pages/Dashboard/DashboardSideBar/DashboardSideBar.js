@@ -56,11 +56,13 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
               isActive
                 ? "ml-8 flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
                 : "ml-8 flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
-            }>Bank Donation</NavLink><NavLink to="carddonate" className={({ isActive }) =>
+            }>Bank Donation</NavLink>
+            {/* <NavLink to="carddonate" className={({ isActive }) =>
               isActive
                 ? "ml-8 flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
                 : "ml-8 flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
-            }>Bkash Donation</NavLink></>
+            }>Bkash Donation</NavLink> */}
+          </>
         }
         <NavLink to="donors" className={({ isActive, isPending }) =>
           isActive
@@ -73,7 +75,7 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
           </span>
           <i className="fa-solid fa-chevron-right ml-2"></i>
         </NavLink>
-        <NavLink to="admin" className={({ isActive, isPending }) =>
+        {/* <NavLink to="admin" className={({ isActive, isPending }) =>
           isActive
             ? "flex justify-between items-center transition-all duration-300 bg-[#5764ec] text-[#d9d9db] py-1 px-2 rounded-full"
             : "flex justify-between items-center transition-all duration-300 hover:bg-[#5764ec] hover:text-[#d9d9db] py-1 px-2 rounded-full"
@@ -83,7 +85,7 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
             <span>Admin</span>
           </span>
           <i className="fa-solid fa-chevron-right ml-2"></i>
-        </NavLink>
+        </NavLink> */}
       </ul>
     </div>
   );
