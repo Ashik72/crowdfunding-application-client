@@ -7,21 +7,19 @@ import PopularCatagories from "../../../Components/PopularCatagories/PopularCata
 import Volunteers from "../../../Components/Volunteers/Volunteers";
 import HeroSection from "../../HeroSection/HeroSection";
 import FirstSection from "../../FirstSection/FirstSection";
-import './style.css'
-import TrustedPartners from "../../../Components/TrustedPartners/TrustedPartners";
-import Sliders from "../../../Components/Sliders/Sliders";
+import "./style.css";
+import CampaignShow from "../CampaignShow/CampaignShow";
 const Home = () => {
   return (
     <div className="">
       <HeroSection></HeroSection>
       <FirstSection></FirstSection>
+      <CampaignShow></CampaignShow>
       <CunstomDonationSection></CunstomDonationSection>
       <PopularCatagories></PopularCatagories>
       <PoorFundActiveMember></PoorFundActiveMember>
       <JoinRecentEvent></JoinRecentEvent>
-      <TrustedPartners></TrustedPartners>
       <Volunteers></Volunteers>
-      {/* <Sliders></Sliders> */}
     </div>
   );
 };
