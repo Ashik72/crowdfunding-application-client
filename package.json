@@ -5,10 +5,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@heroicons/react": "^2.0.14",
     "@mui/material": "^5.11.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@trendyol-js/react-carousel": "^3.0.0",
     "aos": "^2.3.4",
     "daisyui": "^2.46.1",
     "firebase": "^9.15.0",
@@ -20,7 +22,9 @@
     "react-photo-view": "^1.2.3",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "recharts": "^2.3.2",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

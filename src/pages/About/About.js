@@ -68,14 +68,11 @@ export default function About() {
 
   return (
     <div className="relative">
-      <div
-        className="w-full h-36 absolute top-0 right-0"
-        style={{
-          background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)",
-        }}
-      ></div>
-      {/* About start  */}
-      <div className="">
+       <div className="w-full h-36 absolute top-0 right-0" style={{ background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)" }}>
+
+    </div>
+            {/* About start  */}
+            <div className="">
         <div className="w-full h-screen bg-white flex flex-wrap">
           <div className="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
             <div className="shadow-xl md:shadow-none px-12 py-12 md:pl-0 md:pr-24 bg-white md:-mr-64 relative z-10">
@@ -133,79 +130,53 @@ export default function About() {
           </a>
         </div>
       </div>
-      <h2 className="text-center uppercase font-display text-lg lg:text-2xl font-bold text-black py-1 md:py-24 px-6">
-        Gallery
-      </h2>
+      <h2 className="text-center uppercase font-display text-lg lg:text-2xl font-bold text-black py-1 md:py-24 px-6">Gallery</h2>
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 grid-rows-none lg:grid-rows-2 gap-8 text-center text-sm uppercase">
         <div className="col-span-1 row-span-1">
-          <div className="w-full h-52 relative">
-            <img
-              alt=""
-              src="https://i.postimg.cc/XvYrMjYt/img7.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          {/* <div className="p-6">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/XvYrMjYt/img7.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
                 <a href="/product" className="block font-semibold text-black mb-1">Shoes</a>
                 <div>£39</div>
             </div> */}
         </div>
         <div className="col-span-1 row-span-1 lg:col-span-2 lg:row-span-2">
-          <div className="w-full h-52 lg:h-96 relative">
-            <img
-              alt=""
-              src="https://i.postimg.cc/wBngWgyX/img16.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-6 flex justify-center">
-            <Link to="/gallery">
-              <button className="block mb-4 px-4 py-3 text-sm font-bold rounded-full no-underline hover:shadow-md bg-green-600 text-white">
-                See More
-              </button>
-            </Link>
-          </div>
+            <div className="w-full h-52 lg:h-96 relative">
+              <img alt="" src="https://i.postimg.cc/wBngWgyX/img16.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="p-6 flex justify-center">
+            <Link to='/gallery'><button className="block mb-4 px-4 py-3 text-sm font-bold rounded-full no-underline hover:shadow-md bg-green-600 text-white">See More</button></Link>
+            </div>
         </div>
         <div className="col-span-1 row-span-1">
-          <div className="w-full h-52 relative">
-            <img
-              alt=""
-              src="https://i.ibb.co/Mc2MMS2/flooding.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          {/* <div className="p-6">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.ibb.co/Mc2MMS2/flooding.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
                 <a href="/product" className="block font-semibold text-black mb-1">Handbag</a>
                 <div>£39</div>
             </div> */}
         </div>
         <div className="col-span-1 row-span-1">
-          <div className="w-full h-52 relative">
-            <img
-              alt=""
-              src="https://i.postimg.cc/6p5WqHxv/img17.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          {/* <div className="p-6">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/6p5WqHxv/img17.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div className="p-6">
                 <a href="/product" className="block font-semibold text-black mb-1">Earings</a>
                 <div>£29</div>
             </div> */}
         </div>
         <div className="col-span-1 row-span-1">
-          <div className="w-full h-52 relative">
-            <img
-              alt=""
-              src="https://i.postimg.cc/k5YBq0VG/img6.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          {/* <div class="p-6">
+            <div className="w-full h-52 relative">
+              <img alt="" src="https://i.postimg.cc/k5YBq0VG/img6.jpg" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            {/* <div class="p-6">
                 <a href="/product" class="block font-semibold text-black mb-1">Autumn Collection</a>
                 <div>£42.56</div>
             </div> */}
         </div>
-      </div>
+    </div>
       {/* Start Team members */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mt-32">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -517,6 +488,7 @@ export default function About() {
               </div>
             </div>
           </div>
+         
         </div>
       </div>
       {/* STATISTIC Start*/}
@@ -524,45 +496,28 @@ export default function About() {
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
             <div className="w-full sm:p-4 px-4 mb-6">
-              <h1 className="title-font font-medium text-xl mb-2 text-gray-900">
-                Moon hashtag pop-up try-hard offal truffaut
-              </h1>
-              <div className="leading-relaxed">
-                Pour-over craft beer pug drinking vinegar live-edge gastropub,
-                keytar neutra sustainable fingerstache kickstarter.
-              </div>
+              <h1 className="title-font font-medium text-xl mb-2 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+              <div className="leading-relaxed">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
             </div>
             <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 className="title-font font-medium text-3xl text-gray-900">
-                2.7K
-              </h2>
+              <h2 className="title-font font-medium text-3xl text-gray-900">2.7K</h2>
               <p className="leading-relaxed">Users</p>
             </div>
             <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 className="title-font font-medium text-3xl text-gray-900">
-                1.8K
-              </h2>
+              <h2 className="title-font font-medium text-3xl text-gray-900">1.8K</h2>
               <p className="leading-relaxed">Subscribes</p>
             </div>
             <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 className="title-font font-medium text-3xl text-gray-900">
-                1.5k
-              </h2>
+              <h2 className="title-font font-medium text-3xl text-gray-900">1.5k</h2>
               <p className="leading-relaxed">Donate</p>
             </div>
             <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 className="title-font font-medium text-3xl text-gray-900">
-                6
-              </h2>
+              <h2 className="title-font font-medium text-3xl text-gray-900">6</h2>
               <p className="leading-relaxed">Volunteers</p>
             </div>
           </div>
           <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-            <img
-              className="object-cover object-center w-full h-full"
-              src="https://i.ibb.co/sPhgBJj/37261-fytlwhyjyb-1467797135.jpg"
-              alt="stats"
-            />
+            <img className="object-cover object-center w-full h-full" src="https://i.ibb.co/sPhgBJj/37261-fytlwhyjyb-1467797135.jpg" alt="stats" />
           </div>
         </div>
       </section>
@@ -686,9 +641,7 @@ export default function About() {
       <div className="w-full py-24 relative">
         <div className="bg-gray-300 max-w-3xl text-center relative z-20 mx-auto py-6">
           <h3 className="text-2xl mb-4">Subscribe Us</h3>
-          <p className="text-sm mb-6">
-            For news updates and promotional events
-          </p>
+          <p className="text-sm mb-6">For news updates and promotional events</p>
 
           <form className="flex w-full max-w-xs mx-auto">
             <input
