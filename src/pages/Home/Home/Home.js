@@ -7,12 +7,14 @@ import PopularCatagories from "../../../Components/PopularCatagories/PopularCata
 import Volunteers from "../../../Components/Volunteers/Volunteers";
 import HeroSection from "../../HeroSection/HeroSection";
 import FirstSection from "../../FirstSection/FirstSection";
-import './style.css'
+import "./style.css";
+import CampaignShow from "../CampaignShow/CampaignShow";
 const Home = () => {
   return (
     <div className="">
       <HeroSection></HeroSection>
       <FirstSection></FirstSection>
+      <CampaignShow></CampaignShow>
       <CunstomDonationSection></CunstomDonationSection>
       <PopularCatagories></PopularCatagories>
       <PoorFundActiveMember></PoorFundActiveMember>

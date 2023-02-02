@@ -4,6 +4,7 @@ import Main from "../layout/Main";
 import About from "../pages/About/About";
 import Blogs from "../pages/Blogs/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
+import Campaign from "../pages/Campaign/Campaign";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
 import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
@@ -14,6 +15,7 @@ import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/LogIn/LogIn";
+import NgoSignup from "../pages/NgoSignup/NgoSignup";
 import Register from "../pages/Register/Register";
 
 export const router = createBrowserRouter([
@@ -41,22 +43,30 @@ export const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery></Gallery>,
       },
-      
+
       {
         path: "/about",
         element: <About></About>,
       },
       {
         path: "/login",
-        element:<LogIn />
+        element: <LogIn />,
+      },
+      {
+        path: "/campaign",
+        element: <Campaign></Campaign>,
       },
       {
         path: "/register",
-        element:<Register />
+        element: <Register />,
       },
       {
         path: "/donate",
         element: <Donate />,
+      },
+      {
+        path: "/ngosignup",
+        element: <NgoSignup />,
       },
     ],
   },
@@ -70,7 +80,7 @@ export const router = createBrowserRouter([
       { path: "activity", element: <DashboardActivities /> },
       { path: "bankdonors", element: <DashboardBankDonation /> },
       { path: "donors", element: <DashboardDonors /> },
-      {path:"overview",element:<DashboardOverview/>}
+      { path: "overview", element: <DashboardOverview /> },
     ],
   },
 ]);
