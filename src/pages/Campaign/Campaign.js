@@ -43,7 +43,7 @@ const Campaign = () => {
         {/* <img className='w-full h-96 object-cover' src={bannerImg} alt="" /> */}
         <h1 className="text-4xl font-bold">Start Campaign</h1>
       </div>
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 py-24">
+      {/* <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 py-24">
         <div className="hidden lg:grid relative grid-cols-2">
           <div className="pt-24">
             <div className="relative w-full h-full">
@@ -82,18 +82,31 @@ const Campaign = () => {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="lg:w-[900px] mx-auto">
-        {/* <div
-          className="w-full h-36 absolute top-0 right-0"
-          style={{
-            background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)",
-          }}
-        ></div> */}
-
-        <div className="mx-40 py-48">
-          <img src={"https://i.postimg.cc/hGvdHtdT/campaign.png"} alt="" />
+      </div> */}
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <img
+            alt=""
+            src="https://i.postimg.cc/hGvdHtdT/campaign.png"
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">See All Campaign Information</h1>
+            <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button className="mt-8 inline-block rounded-full border-2 border-gray-900 text-lg px-8 py-3 hover:bg-green-600 hover:text-white">
+              Click Here
+            </button>
+          </div>
         </div>
+      </div>
+      <div className="lg:w-[900px] mx-auto py-12">
+        {/* <div className="mx-40 py-48">
+          <img src={"https://i.postimg.cc/hGvdHtdT/campaign.png"} alt="" />
+        </div> */}
         <div>
           <h1 className="text-4xl font-bold text-center">
             Let's get ready to start your campaign!
