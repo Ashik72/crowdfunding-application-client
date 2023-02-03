@@ -24,6 +24,8 @@ export default function NgoSignup() {
       country,
     };
 
+    console.log(NgoSignupInfo);
+
     fetch("http://localhost:5000/ngosignup", {
       method: "POST",
       headers: {
@@ -42,6 +44,7 @@ export default function NgoSignup() {
       })
       .catch((er) => console.error(er));
   };
+
   return (
     <div>
       {/* banner section for blogs */}
@@ -83,7 +86,7 @@ export default function NgoSignup() {
               similar fellowship from partner organisations.
             </p>
             <Link
-              href="/about"
+              to="/partners"
               className="mt-8 inline-block rounded-full border-2 border-gray-900 text-lg px-8 py-3 hover:bg-green-600 hover:text-white"
             >
               Our Accredited Partners
@@ -93,8 +96,8 @@ export default function NgoSignup() {
       </div>
       {/* ----------------------PartnerShip---------------------------- */}
       <div className="bg-white py-24 px-12">
-        <div class=" pt-20 p-8 flex ">
-          <h3 class="font-display-italic font-extrabold text-4xl md:text-4xl italic leading-none mb-12">
+        <div className=" pt-20 p-8 flex ">
+          <h3 className="font-display-italic font-extrabold text-4xl md:text-4xl italic leading-none mb-12">
             Why should an NGO register with Aid-Humans?
           </h3>
         </div>
@@ -215,30 +218,31 @@ export default function NgoSignup() {
       </div>
       {/* ---------------------------------------------------- */}
       <div className="container mx-auto">
-        <div class=" pt-20 p-8 flex justify-center ">
-          <h3 class="font-display-italic font-extrabold text-4xl md:text-4xl italic leading-none mb-12">
+        <div className=" pt-20 p-8 flex justify-center ">
+          <h3 className="font-display-italic font-extrabold text-4xl md:text-4xl italic leading-none mb-12">
             NGO REGISTRATION
           </h3>
         </div>
         <div>
-          <div className="md:grid md:grid-cols-3 md:gap-6">
-            <div className="md:col-span-1">
+          <div className="">
+            <div className="text-center">
               <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
+                <h3 className="text-2xl font-bold leading-6 text-gray-900">
                   Your information
                 </h3>
-                <p className="mt-1 text-sm text-gray-600">
+                <p className="mt-1 text-lg text-gray-600">
                   This information will be displayed publicly so be careful what
                   you share.
                 </p>
               </div>
             </div>
-            <form onSubmit={handelNgo}>
-              <div className="mt-5 md:col-span-2 md:mt-0">
+            <form onSubmit={handelNgo} className='lg:w-[1000px] mx-auto mt-8'>
+              
                 <div className="shadow sm:overflow-hidden sm:rounded-md">
-                  <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
-                    {/* Ogranisation Name */}
-                    <div className="form-control w-full max-w-xs">
+                  <div className="m-11">
+                    <div className="lg:flex justify-between items-center">
+                        {/* Ogranisation Name */}
+                    <div className="form-control lg:w-6/12">
                       <label className="label">
                         <span className="label-text block text-sm font-medium text-gray-700">
                           Ogranisation Name
@@ -252,14 +256,16 @@ export default function NgoSignup() {
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       />
                     </div>
-                    {/* Website */}
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="col-span-3 sm:col-span-2">
+                    {/* PhotoURL */}
+                    <div className="form-control lg:w-5/12 mt-3">
                         <label
                           htmlFor="company-website"
                           className="block text-sm font-medium text-gray-700"
                         >
-                          Website
+                          PhotoURL
+                          {/* https://i.ibb.co/TL0LNhY/Lok-Kalyan-Seva-Kendra-20210729-180737-Ngo-Logo.jpg 
+                          https://i.ibb.co/wJwMvMH/sathi-logo.png
+                          https://i.ibb.co/hYvt6RD/rosa-logo.png*/}
                         </label>
                         <div className="mt-1 flex rounded-md shadow-sm">
                           <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
@@ -270,75 +276,80 @@ export default function NgoSignup() {
                             name="companyWebsite"
                             id="company-website"
                             className="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-3"
-                            placeholder="www.example.com"
+                            placeholder="https://i.ibb.co/imgbb.png"
                           />
                         </div>
-                      </div>
+                    </div>
                     </div>
                     {/* USERNAME / EMAIL ADDRESS / FIRST NAME / LAST NAME */}
-                    <div class="flex flex-wrap">
-                      <div class="w-full lg:w-6/12 ">
-                        <div class="relative w-full mb-3">
+                    <div className="">
+                      <div className="flex justify-center items-center mt-4">
+                      <div className="w-full lg:w-6/12">
+                        <div className="relative w-full mb-3">
                           <label
-                            class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlfor="grid-password"
+                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            htmlFor="grid-password"
                           >
                             Username
                           </label>
                           <input
                             type="text"
                             name="userName"
+                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                             placeholder="ucky jesse"
                           />
                         </div>
                       </div>
-                      <div class="w-full lg:w-6/12 px-4">
-                        <div class="relative w-full mb-3">
+                      <div className="w-full lg:w-6/12 px-4">
+                        <div className="relative w-full mb-3">
                           <label
-                            class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlfor="grid-password"
+                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            htmlFor="grid-password"
                           >
                             Email address
                           </label>
                           <input
                             type="email"
                             name="email"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                             placeholder="jesse@example.com"
                           />
                         </div>
                       </div>
-                      <div class="w-full lg:w-6/12 ">
-                        <div class="relative w-full mb-3">
+                      </div>
+                      <div className="flex justify-center items-center">
+                      <div className="w-full lg:w-6/12 ">
+                        <div className="relative w-full mb-3">
                           <label
-                            class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlfor="grid-password"
+                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            htmlFor="grid-password"
                           >
                             First Name
                           </label>
                           <input
                             type="text"
                             name="firstName"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                             placeholder="Lucky"
                           />
                         </div>
                       </div>
-                      <div class="w-full lg:w-6/12 px-4">
-                        <div class="relative w-full mb-3">
+                      <div className="w-full lg:w-6/12 px-4">
+                        <div className="relative w-full mb-3">
                           <label
-                            class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            htmlfor="grid-password"
+                            className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            htmlFor="grid-password"
                           >
                             Last Name
                           </label>
                           <input
                             type="text"
                             name="lastName"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                             placeholder="Jesse"
                           />
                         </div>
+                      </div>
                       </div>
                     </div>
                     {/* Description */}
@@ -377,22 +388,27 @@ export default function NgoSignup() {
                         autoComplete="country-name"
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+                        <option className='text-xl' country='Bangladesh'>Bangladesh</option>
+                            <option className='text-xl' country='India'>India</option>
+                            <option className='text-xl' country='Nepal'>Nepal</option>
+                            <option className='text-xl' country='Malaysia'>Malaysia</option>
+                            <option className='text-xl' country='Bhutan'>Bhutan</option>
+                            <option className='text-xl' country='Finland'>Finland</option>
+                            <option className='text-xl' country='England'>England</option>
+                            <option className='text-xl' country='Others'>Others</option>
                       </select>
                     </div>
                   </div>
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-green-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       Save
                     </button>
                   </div>
                 </div>
-              </div>
+             
             </form>
           </div>
         </div>

@@ -16,6 +16,8 @@ import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/LogIn/LogIn";
 import NgoSignup from "../pages/NgoSignup/NgoSignup";
+import PartnerDetails from "../pages/PartnerDetails/PartnerDetails";
+import Partners from "../pages/Partners/Partners";
 import Register from "../pages/Register/Register";
 
 export const router = createBrowserRouter([
@@ -52,9 +54,20 @@ export const router = createBrowserRouter([
         path: "/login",
         element: <LogIn />,
       },
+      { path: "/campaign", element: <Campaign></Campaign> },
       {
-        path: "/campaign",
-        element: <Campaign></Campaign>,
+        path: "/ngosignup",
+        element: <NgoSignup></NgoSignup>,
+      },
+      {
+        path: "/partners",
+        element: <Partners></Partners>,
+      },
+      {
+        path: "/partners/:id",
+        element: <PartnerDetails></PartnerDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/ngoSignup/${params.id}`),
       },
       {
         path: "/register",
@@ -63,10 +76,6 @@ export const router = createBrowserRouter([
       {
         path: "/donate",
         element: <Donate />,
-      },
-      {
-        path: "/ngosignup",
-        element: <NgoSignup />,
       },
     ],
   },

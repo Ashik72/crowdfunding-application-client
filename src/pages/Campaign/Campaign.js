@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-// import img from '../../images/campaign.png';
+// import img from "../../images/campaign.png";
 
 const Campaign = () => {
   const {
@@ -39,15 +39,9 @@ const Campaign = () => {
   };
 
   return (
-    <div className="lg:w-[900px] mx-auto py-48">
-      <div
-        className="w-full h-36 absolute top-0 right-0"
-        style={{
-          background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)",
-        }}
-      ></div>
+    <div className="lg:w-[900px] mx-auto">
       <div className="mx-40">
-        <img src={"https://i.postimg.cc/HWByHV1V/campaign.png"} alt="" />
+        <img src={"https://i.postimg.cc/hGvdHtdT/campaign.png"} alt="" />
       </div>
       <div>
         <h1 className="text-4xl font-bold text-center">
