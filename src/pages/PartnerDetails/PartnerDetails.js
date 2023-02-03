@@ -6,6 +6,12 @@ const PartnerDetails = () => {
   const detailPartner = useLoaderData();
   return (
     <div>
+      <div
+        className="w-full h-36 absolute top-0 right-0"
+        style={{
+          background: "linear-gradient(#0c0c0c9c,#0c0c0c80, #0c0c0c08)",
+        }}
+      ></div>
       <div>
         <img src={"https://i.postimg.cc/wMLJ04sr/partners2.jpg"} alt="" />
       </div>
