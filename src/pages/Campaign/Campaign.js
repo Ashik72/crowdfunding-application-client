@@ -2,8 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import CampaignShow from "./CampaignShow/CampaignShow";
-// import img from "../../images/campaign.png";
 
 const Campaign = () => {
   const {
@@ -22,7 +20,7 @@ const Campaign = () => {
       bankName: data.bankName,
     };
 
-    fetch("http://localhost:5000/campaign", {
+    fetch("https://crowdfunding-projects-server.vercel.app/campaign", {
       method: "POST",
       headers: {
         "content-type": "application/json",

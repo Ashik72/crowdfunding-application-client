@@ -32,15 +32,15 @@ const FirstStep = () => {
   // first name
   if (fName && fName === "") {
     inputFirstName = "First name is require";
-  } else if ((fName && fName.length < 5) || fName.length > 10) {
-    inputFirstName = "First name must be between 5 to 10 range";
+  } else if ((fName && fName.length < 2) || fName.length > 10) {
+    inputFirstName = "First name must be between 2 to 10 range";
   }
 
   // last name
   if (lName && lName === "") {
     inputLastName = "Last name is require";
-  } else if ((lName && lName.length < 5) || lName.length > 10) {
-    inputLastName = "Last name must be between 5 to 10 range";
+  } else if ((lName && lName.length < 2) || lName.length > 10) {
+    inputLastName = "Last name must be between 2 to 10 range";
   }
 
   // Email
@@ -126,7 +126,7 @@ const FirstStep = () => {
               </label>
               <input
                 className={`appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${
-                  fName && (fName === "" || fName.length < 5)
+                  fName && (fName === "" || fName.length < 2)
                     ? "inputErrorBorder"
                     : null
                 }`}
@@ -157,7 +157,7 @@ const FirstStep = () => {
               </label>
               <input
                 className={`appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${
-                  lName && (lName === "" || lName.length < 5)
+                  lName && (lName === "" || lName.length < 2)
                     ? "inputErrorBorder"
                     : null
                 }`}
@@ -409,12 +409,12 @@ const FirstStep = () => {
           {/* (fName && fName.length < 5) || fName.length > 10) */}
 
           {fName === "" ||
-          (fName && fName.length < 5) ||
+          (fName && fName.length < 2) ||
           fName.length > 10 ||
           lName === "" ||
           !email ||
           !emailRegex.test(email) ||
-          (lName && lName.length < 5) ||
+          (lName && lName.length < 2) ||
           lName.length > 10 ||
           (number && number.length < 5) ||
           (number && number.length > 11) ||

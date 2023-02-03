@@ -80,7 +80,9 @@ export const router = createBrowserRouter([
         path: "/partners/:id",
         element: <PartnerDetails></PartnerDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/ngoSignup/${params.id}`),
+          fetch(
+            `https://crowdfunding-projects-server.vercel.app/ngoSignup/${params.id}`
+          ),
       },
     ],
   },

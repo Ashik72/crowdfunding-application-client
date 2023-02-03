@@ -4,7 +4,7 @@ export default function CampaignShow() {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/campaign")
+    fetch("https://crowdfunding-projects-server.vercel.app/campaign")
       .then((res) => res.json())
       .then((data) => setCampaigns(data));
   }, []);

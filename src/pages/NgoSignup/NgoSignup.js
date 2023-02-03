@@ -26,7 +26,7 @@ export default function NgoSignup() {
 
     console.log(NgoSignupInfo);
 
-    fetch("http://localhost:5000/ngosignup", {
+    fetch("https://crowdfunding-projects-server.vercel.app/ngosignup", {
       method: "POST",
       headers: {
         "content-type": "application/json",
