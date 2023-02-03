@@ -5,7 +5,6 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const BlogsCard = ({ blogCard }) => {
-  console.log(blogCard);
   const { _id, image, title, details, date } = blogCard;
   return (
     <div className="card z-0 lg:w-96 bg-base-100 shadow-xl mb-10" data-aos="fade-up" data-aos-duration="3000">

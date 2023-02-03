@@ -27,7 +27,7 @@ const CharitableUser = () => {
   };
 
   return (
-    <div className="max-w-[70%] mx-auto">
+    <div className="max-w-[70%] mx-auto px-2">
       {/* Stepper */}
 
       <FinalStepperDataGet></FinalStepperDataGet>

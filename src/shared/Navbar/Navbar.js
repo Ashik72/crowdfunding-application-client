@@ -5,16 +5,13 @@ import { Link, NavLink } from "react-router-dom";
 import logo2 from "../../assets/logo/logo.png";
 import logo from "../../assets/logo/logo1.png";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
-
+import { Bars3Icon } from "@heroicons/react/24/solid";
 const Navbar = () => {
-  //   window.addEventListener("scroll", () => {
-  //     var navigation = document.querySelector(".nav");
-  //     navigation.classList.toggle("sticky", window.scrollY > 0);
-  //   });
   const { logOut, user } = useContext(AuthContext);
   const [className, setClassName] = useState("");
   const [logoHidden, setLogoHidden] = useState("");
   const [logoShow, setLogoShow] = useState("");
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -96,18 +93,6 @@ const Navbar = () => {
           About
         </NavLink>
       </li>
-      <li className="nav-item">
-        <NavLink
-          to="/campaign"
-          className={({ isActive }) =>
-            isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1"
-          }
-        >
-          Start-Campaign
-        </NavLink>
-      </li>
 
       <li className="nav-item">
         <NavLink
@@ -119,18 +104,6 @@ const Navbar = () => {
           }
         >
           gallery
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink
-          to="/ngosignup"
-          className={({ isActive }) =>
-            isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1"
-          }
-        >
-          Ngo-Sign-Up
         </NavLink>
       </li>
 
@@ -146,6 +119,33 @@ const Navbar = () => {
           Blogs
         </NavLink>
       </li>
+
+      <li className="nav-item">
+        <NavLink
+          to="/campaign"
+          className={({ isActive }) =>
+            isActive
+              ? "nav-link border-b-2 border-[#02A95C] pb-1"
+              : "nav-link pb-1"
+          }
+        >
+          Start-Campaign
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink
+          to="/ngosignup"
+          className={({ isActive }) =>
+            isActive
+              ? "nav-link border-b-2 border-[#02A95C] pb-1"
+              : "nav-link pb-1"
+          }
+        >
+          Ngo-Sign-Up
+        </NavLink>
+      </li>
+
       <li className="nav-item">
         <NavLink
           to="/dashboard/user"
@@ -203,7 +203,7 @@ const Navbar = () => {
         </>
       )}
 
-      <li className="nav-item flex justify-center items-center">
+      <li className="nav-item flex justify-center items-center ">
         <Link to="/donate" className="nav-link">
           <div className="nav-donate-btn font-semibold">Donate now</div>
         </Link>
@@ -221,12 +221,12 @@ const Navbar = () => {
             <div className="">
               <img
                 src={logo2}
-                className={`w-[20%] absolute top-0 left-0 ${logoHidden}`}
+                className={`w-[20%] lg:w-[14%]  absolute top-0 left-0 ${logoHidden}`}
                 alt=""
               />
               <img
                 src={logo}
-                className={`w-[20%] absolute top-0 left-0 ${logoShow}`}
+                className={`w-[20%] lg:w-[14%]  absolute top-0 left-0 ${logoShow}`}
                 alt=""
               />
             </div>
@@ -239,29 +239,29 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden block">
-            <button onClick={toggleClass} className="text-white click-menu-btn">
-              <span className="span"></span>
-              <span className="span"></span>
-              <span className="span"></span>
+            <button
+              onClick={() => setToggle(!toggle)}
+              className="text-white click-menu-btn"
+            >
+              <span className="">
+                <Bars3Icon className="h-6 w-6" />
+              </span>
             </button>
             <ul
-              className={`my-class navbar-nav flex items-start justify-between flex-col text-black off-canvas-menu px-7 ${
-                isActive ? "off-canvas-canvas-menu-active" : ""
+              className={`my-class navbar-nav flex items-start justify-between flex-col text-black off-canvas-menu px-7 relative  ${
+                toggle ? "off-canvas-canvas-menu-active" : ""
               }`}
             >
+              <i
+                onClick={() => setToggle(!toggle)}
+                className="fa-solid fa-xmark text-white text-lg absolute right-6 top-6"
+              ></i>
               <div>
-                <span>
-                  <img
-                    src="https://i.ibb.co/SfKRDgh/logo2.png"
-                    className="max-w-[150px]"
-                    alt=""
-                  />
+                <span className=" w-full flex justify-between items-center">
+                  <img src={logo} className="max-w-[150px]" alt="" />
                 </span>
                 {/* <!-- menu close --> */}
-                <div class="menu-close  flex justify-center items-center">
-                  <FaTimes />
-                </div>
-                <div className="off-canvas-menu-item">{navItems}</div>
+                <div className="text-gray-200 grid gap-2">{navItems}</div>
               </div>
             </ul>
           </div>

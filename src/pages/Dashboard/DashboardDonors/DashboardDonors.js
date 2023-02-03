@@ -1,20 +1,41 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
-import murad from "../../../assets/images/1.jpg"
+import { Circles } from 'react-loader-spinner';
 import SingleDonor from './SingleDonor/SingleDonor';
 const DashboardDonors = () => {
-  const [donateData, setDonateData] = useState([]);
-  useEffect(() => {
-    fetch("https://croudfunding-server-muradwahid.vercel.app/donate")
-      .then(res => res.json())
-      .then(data => {
-        setDonateData(data)
-      })
-  }, [])
+  const [donorAmount, setDonorAmount] = useState('');
+
+
+  const { data: donateData = [], refetch, isLoading } = useQuery({
+    queryKey: ['users'],
+    queryFn: async () => {
+      const res = await fetch(`https://croudfunding-server-muradwahid.vercel.app/donate`)
+      const data = await res.json()
+      return data
+    }
+  })
+
+  if (isLoading) {
+    return <div className='w-full p-6 bg-[#04061a] overflow-x-scroll h-[100vh] flex justify-center items-center' >
+      <Circles
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      >
+
+      </Circles>
+    </div>
+  }
+
   return (
-    <div className='w-full p-6 bg-gray-200 '>
+    <div className='w-full p-6 bg-[#04061a] overflow-x-scroll '>
       <div className='flex justify-between items-center mb-4'>
-        <h2 className='text-2xl font-serif font-semibold text-gray-800'>Donors</h2>
-        <p><span className='font-semibold text-gray-800 font-serif'>Totall donors:</span>{donateData.length}</p>
+        <h2 className='text-2xl font-serif font-semibold text-gray-300'>Donors</h2>
+        <p className='text-gray-300'><span className='font-semibold text-gray-300 font-serif'>Totall donors:</span> {donateData.length}</p>
       </div>
       <div className="">
         <table className="w-full">
@@ -22,13 +43,13 @@ const DashboardDonors = () => {
             <tr className='text-gray-200'>
               <th className='text-left'></th>
               <th className='text-left'>Donor</th>
-              <th className='text-left'>Total Donation</th>
-              <th className='text-left'>Last Donation Date</th>
+              <th className='text-left'>Donation</th>
+              <th className='text-left'>Donation Date</th>
               <th className='text-left'>Donor Type</th>
             </tr>
           </thead>
-          <tbody>
-            {donateData?.map(data => <SingleDonor key={data._id} data={data}/>)}
+          <tbody >
+            {donateData?.map(data => <SingleDonor key={data._id} donorAmount={donorAmount} setDonorAmount={setDonorAmount} data={data}/>)}
           </tbody>
         </table>
       </div>

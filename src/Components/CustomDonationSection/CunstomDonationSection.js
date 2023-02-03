@@ -42,7 +42,7 @@ const CunstomDonationSection = () => {
         </div>
         <div className="">
           <img src={bg} alt="" />
-          <div className="mt-10">
+          <div className="mt-10 ml-2">
             <h1 className="text-4xl py-5 font-semibold ">Great Donners</h1>
             <p className="text-lg font-semibold mb-7">
               Recently, those whose pictures you are looking at below are our
@@ -50,7 +50,7 @@ const CunstomDonationSection = () => {
               many of our events.
             </p>
           </div>
-          <div className="flex pb-[55px]">
+          <div className="flex pb-[55px] ml-2">
             <div className="avatar mr-4">
               <div className="w-14 rounded-full ring ring-[#202124] ring-offset-base-100 ring-offset-2">
                 <img

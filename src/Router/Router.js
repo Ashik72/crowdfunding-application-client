@@ -5,11 +5,15 @@ import About from "../pages/About/About";
 import Blogs from "../pages/Blogs/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
 import Campaign from "../pages/Campaign/Campaign";
+import CampaignShow from "../pages/Campaign/CampaignShow/CampaignShow";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
+import DashboardAdmin from "../pages/Dashboard/DashboardAdmin/DashboardAdmin";
 import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
+import DashboardBkashDonation from "../pages/Dashboard/DashboardBkashDonation/DashboardBkashDonation";
 import DashboardDonors from "../pages/Dashboard/DashboardDonors/DashboardDonors";
 import DashboardOverview from "../pages/Dashboard/DashboardOverview/DashboardOverview";
+import DashboardPosts from "../pages/Dashboard/DashboardPosts/DashboardPosts";
 import DashboardUser from "../pages/Dashboard/DashboardUser/DashboardUser";
 import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
@@ -50,14 +54,23 @@ export const router = createBrowserRouter([
         path: "/about",
         element: <About></About>,
       },
+
       {
-        path: "/login",
-        element: <LogIn />,
+        path: "/campaign",
+        element: <Campaign></Campaign>,
       },
-      { path: "/campaign", element: <Campaign></Campaign> },
+      {
+        path: "/campaignshow",
+        element: <CampaignShow></CampaignShow>,
+      },
+
+      {
+        path: "/donate",
+        element: <Donate />,
+      },
       {
         path: "/ngosignup",
-        element: <NgoSignup></NgoSignup>,
+        element: <NgoSignup />,
       },
       {
         path: "/partners",
@@ -68,14 +81,6 @@ export const router = createBrowserRouter([
         element: <PartnerDetails></PartnerDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/ngoSignup/${params.id}`),
-      },
-      {
-        path: "/register",
-        element: <Register />,
-      },
-      {
-        path: "/donate",
-        element: <Donate />,
       },
     ],
   },
@@ -90,6 +95,17 @@ export const router = createBrowserRouter([
       { path: "bankdonors", element: <DashboardBankDonation /> },
       { path: "donors", element: <DashboardDonors /> },
       { path: "overview", element: <DashboardOverview /> },
+      { path: "admin", element: <DashboardAdmin /> },
+      { path: "posts", element: <DashboardPosts /> },
+      { path: "bkash", element: <DashboardBkashDonation /> },
     ],
+  },
+  {
+    path: "/login",
+    element: <LogIn />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);

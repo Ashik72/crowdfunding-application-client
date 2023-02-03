@@ -48,7 +48,6 @@ const SingleBlog = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         form.reset();
         toast.success("Comment added!");
         setUpdate(true);

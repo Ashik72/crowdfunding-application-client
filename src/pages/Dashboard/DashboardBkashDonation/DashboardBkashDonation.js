@@ -7,7 +7,7 @@ const options = { year: "numeric", month: "long", day: "numeric" };
 const today = new Date();
 const date = today.toLocaleDateString("en-US", options);
 
-const DashboardBankDonation = () => {
+const DashboardBkashDonation = () => {
   const { data: donateData = [], isLoading } = useQuery({
     queryKey: ["donate"],
     queryFn: async () => {
@@ -34,20 +34,19 @@ const DashboardBankDonation = () => {
       </Circles>
     </div>
   }
-
   return (
     <div className='w-full p-6 bg-[#04061a] overflow-x-scroll mb-16'>
-      <h2 className='text-2xl font-serif text-gray-300 text-center mb-3 -ml-12'>Bank Donation</h2>
+      <h2 className='text-2xl font-serif text-gray-300 text-center mb-3 -ml-12'>Bkash Donation</h2>
       <div className='flex items-center font-serif mb-3'>
         <hr className='w-[42%] border-gray-500' />
         <p className='text-gray-300'>{date}</p>
         <hr className='w-[40%] border-gray-500' />
       </div>
       <div className='grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-6'>
-        {donateData?.slice(6).map(data => <SingleActivity key={data._id} data={data} />)}
+        {donateData?.slice(8).map(data => <SingleActivity key={data._id} data={data} />)}
       </div>
     </div>
   );
 };
 
-export default DashboardBankDonation;
+export default DashboardBkashDonation;

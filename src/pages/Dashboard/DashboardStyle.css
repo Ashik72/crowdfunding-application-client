@@ -1,0 +1,37 @@
+.dashboardUserImgParent{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  top:11px
+}
+.dashboardUserImg{
+  transform: rotate(-45deg);
+  max-width: 224px !important;
+  height: 224px;
+  object-fit: cover;
+  margin-top: -32px;
+  margin-left: -30px;
+  box-shadow: 10px 10px white ;
+}
+.donation-shadow{
+  box-shadow: -1px 0px 8px 0px #5764ec;
+  z-index: 10;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+.donation-shadow:hover{
+  z-index: 100;
+  transform: scale(1.2);
+}
+/* tbody::before {
+  content: '';
+  display: block;
+  height: 10px;
+} */
+
+.dashboard-post-shadow{
+    box-shadow: -1px 0px 8px 0px #5764ec;
+      z-index: 10;
+}

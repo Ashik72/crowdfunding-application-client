@@ -8,17 +8,18 @@ import Volunteers from "../../../Components/Volunteers/Volunteers";
 import HeroSection from "../../HeroSection/HeroSection";
 import FirstSection from "../../FirstSection/FirstSection";
 import "./style.css";
-import CampaignShow from "../CampaignShow/CampaignShow";
+import TrustedPartners from "../../../Components/TrustedPartners/TrustedPartners";
+
 const Home = () => {
   return (
     <div className="">
       <HeroSection></HeroSection>
       <FirstSection></FirstSection>
-      <CampaignShow></CampaignShow>
       <CunstomDonationSection></CunstomDonationSection>
       <PopularCatagories></PopularCatagories>
       <PoorFundActiveMember></PoorFundActiveMember>
       <JoinRecentEvent></JoinRecentEvent>
+      <TrustedPartners />
       <Volunteers></Volunteers>
     </div>
   );
