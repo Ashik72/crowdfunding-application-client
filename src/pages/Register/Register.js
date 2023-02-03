@@ -39,7 +39,7 @@ function Register() {
               handleUserProfileUpdate(data.name, imgData.data.url);
             })
             .catch((error) => console.log(error));
-          fetch("http://localhost:5000/users", {
+          fetch("https://croudfunding-server-muradwahid.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -72,14 +72,14 @@ function Register() {
         image: googleUser.photoURL,
       };
 
-      fetch("http://localhost:5000/users")
+      fetch("https://croudfunding-server-muradwahid.vercel.app/users")
         .then((res) => res.json())
         .then((data) => {
           const postUserData = data.find(
             (post) => post.email === googleUser.email
           );
           if (postUserData?.email !== googleUser?.email) {
-            fetch("http://localhost:5000/users", {
+            fetch("https://croudfunding-server-muradwahid.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
