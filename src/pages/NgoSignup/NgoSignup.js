@@ -1,48 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 export default function NgoSignup() {
+  const [isLoading, setLoading] = useState(false);
   const handelNgo = (e) => {
     e.preventDefault();
     const form = e.target;
     const organigationName = form.organigationName.value;
-    const companyWebsite = form.companyWebsite.value;
     const userName = form.userName.value;
     const email = form.email.value;
     const lastName = form.lastName.value;
     const decs = form.decs.value;
     const country = form.country.value;
-
-    const NgoSignupInfo = {
-      organigationName,
-      companyWebsite,
-      userName,
-      email,
-      lastName,
-      decs,
-      country,
-    };
-
-    console.log(NgoSignupInfo);
-
-    fetch("https://crowdfunding-projects-server.vercel.app/ngosignup", {
+    const image = form.image.files[0];
+    const formData = new FormData();
+    formData.append("image", image);
+    const url = `https://api.imgbb.com/1/upload?key=684c6274d794de1079ffad375804e558`;
+    fetch(url, {
       method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(NgoSignupInfo),
+      body: formData
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.acknowledged) {
-          toast("NgoSignupInfo placed successfully");
+      .then(res => res.json())
+      .then(imgData => {
+        if (imgData.success) {
+          const NgoSignupInfo = {
+            organigationName,
+            userName,
+            email,
+            lastName,
+            decs,
+            country,
+            image: imgData.data.url,
+          };
+          fetch("https://crowdfunding-projects-server.vercel.app/ngosignup", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(NgoSignupInfo),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              if (data.acknowledged) {
+                toast("NgoSignupInfo placed successfully");
 
-          form.reset();
+                form.reset();
+              }
+            })
+            .catch((er) => console.error(er));
         }
+
       })
-      .catch((er) => console.error(er));
   };
 
   return (
@@ -252,11 +262,11 @@ export default function NgoSignup() {
                         type="text"
                         name="organigationName"
                         placeholder="Type here"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
                       />
                     </div>
                     {/* PhotoURL */}
-                    <div className="form-control lg:w-5/12 mt-3">
+                    <div className="form-control lg:w-[48%] mt-3">
                       <label
                         htmlFor="company-website"
                         className="block text-sm font-medium text-gray-700"
@@ -266,17 +276,8 @@ export default function NgoSignup() {
                           https://i.ibb.co/wJwMvMH/sathi-logo.png
                           https://i.ibb.co/hYvt6RD/rosa-logo.png*/}
                       </label>
-                      <div className="mt-1 flex rounded-md shadow-sm">
-                        <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
-                          http://
-                        </span>
-                        <input
-                          type="text"
-                          name="companyWebsite"
-                          id="company-website"
-                          className="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-3"
-                          placeholder="https://i.ibb.co/imgbb.png"
-                        />
+                      <div className="mt-1 rounded-md shadow-sm lg:mr-5">
+                        <input type="file" name="image" className="file-input file-input-bordered w-full border border-gray-700" />
                       </div>
                     </div>
                   </div>
@@ -294,7 +295,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="userName"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
                             placeholder="ucky jesse"
                           />
                         </div>
@@ -310,7 +311,7 @@ export default function NgoSignup() {
                           <input
                             type="email"
                             name="email"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
                             placeholder="jesse@example.com"
                           />
                         </div>
@@ -328,7 +329,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="firstName"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
                             placeholder="Lucky"
                           />
                         </div>
@@ -344,7 +345,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="lastName"
-                            className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
                             placeholder="Jesse"
                           />
                         </div>
@@ -364,7 +365,7 @@ export default function NgoSignup() {
                         id="about"
                         name="decs"
                         rows={3}
-                        className="mt-1 block w-full border rounded-md shadow-sm focus:outline-none focus:ring sm:text-sm"
+                        className="mt-1 block w-full border border-gray-800 rounded-md shadow-sm  focus:outline-green-500 sm:text-sm"
                         placeholder=""
                         defaultValue={""}
                       />
