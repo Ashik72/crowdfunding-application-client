@@ -24,7 +24,7 @@ const DashboardSideBar = ({ dashboardToggle, setDashboardToggle }) => {
 
   return (
     <div
-      className={`w-[300px] h-full lg:block hidden py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all duration-500 ${
+      className={`w-[300px] pt-24 h-full lg:block hidden py-4 px-6 bg-[#010424] text-gray-300 font-semibold tracking-[1px] font-serif transition-all  duration-500 ${
         dashboardToggle ? "lg:ml-0 ml-[-300px]" : "ml-0"
       } lg:static absolute z-50`}
     >

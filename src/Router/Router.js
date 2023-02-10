@@ -6,6 +6,7 @@ import Blogs from "../pages/Blogs/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
 import Campaign from "../pages/Campaign/Campaign";
 import CampaignShow from "../pages/Campaign/CampaignShow/CampaignShow";
+import Causes from "../pages/Causes/Causes";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
 import DashboardAdmin from "../pages/Dashboard/DashboardAdmin/DashboardAdmin";
@@ -19,7 +20,10 @@ import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/LogIn/LogIn";
+import NaturalDisaster from "../pages/NaturalDisaster/NaturalDisaster";
 import NgoSignup from "../pages/NgoSignup/NgoSignup";
+import OurEventDetails from "../pages/OurEvents/OurEventDetails/OurEventDetails";
+import OurEvents from "../pages/OurEvents/OurEvents";
 import PartnerDetails from "../pages/PartnerDetails/PartnerDetails";
 import Partners from "../pages/Partners/Partners";
 import Register from "../pages/Register/Register";
@@ -83,6 +87,26 @@ export const router = createBrowserRouter([
           fetch(
             `https://crowdfunding-projects-server.vercel.app/ngoSignup/${params.id}`
           ),
+      },
+      {
+        path: "/our-events",
+        element: <OurEvents />,
+      },
+      {
+        path: "/our-events/event-details/:id",
+        element: <OurEventDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://croudfunding-server-muradwahid.vercel.app/event/${params.id}`
+          ),
+      },
+      {
+        path: "causes",
+        element: <Causes />,
+      },
+      {
+        path: "/naturalDisaster",
+        element: <NaturalDisaster></NaturalDisaster>,
       },
     ],
   },
