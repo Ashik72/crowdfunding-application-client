@@ -77,10 +77,10 @@ const OurEvents = () => {
               <h2 className='text-5xl font-bold mb-6 text-gray-200'>Make Donation <br /> for poor people</h2>
               <p className='flex items-center text-gray-200'><span>Raised: </span> <h2 className='text-2xl font-semibold'> $9000</h2> </p>
               <div className='w-full h-5 bg-[#7CA055] rounded-full overflow-hidden mb-10'>
-                <div className='w-[70%] h-full gap-6 bg-[#3D7D3C]'></div>
+                <div className='w-[70%] h-full gap-6 bg-[#07847f]'></div>
               </div>
               <div>
-                <Link className='bg-gradient-to-t from-[#3D7D3C] to-[#64e262] px-7 py-4 text-[18px] font-semibold text-gray-300 rounded-xl'>Donate Now</Link>
+                <Link to="/donate" className='bg-gradient-to-t from-[#07847f] to-[#25dbd5] px-7 py-4 text-[18px] font-semibold text-gray-300 rounded-xl'>Donate Now</Link>
               </div>
             </div>
             <div>

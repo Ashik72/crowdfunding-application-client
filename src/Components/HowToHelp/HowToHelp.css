@@ -1,0 +1,8 @@
+.help__card .te-xt:hover p,h4{
+  color: black;
+  cursor: pointer;
+}
+.help__card .te-xt:hover h4{
+  color: black;
+  cursor: pointer;
+}

@@ -66,7 +66,7 @@ const SecondStep = () => {
           variant="contained"
           onClick={() => setCurrentStepData(1)}
           sx={{
-            backgroundColor: "#02A95C",
+            backgroundColor: "#07847f",
             "&:hover": { backgroundColor: "#15803D" },
           }}
         >
@@ -90,7 +90,7 @@ const SecondStep = () => {
             variant="contained"
             onClick={() => setCurrentStepData(3)}
             sx={{
-              backgroundColor: "#02A95C",
+              backgroundColor: "#07847f",
               "&:hover": { backgroundColor: "#15803D" },
             }}
             disabled
@@ -102,7 +102,7 @@ const SecondStep = () => {
             variant="contained"
             onClick={() => setCurrentStepData(3)}
             sx={{
-              backgroundColor: "#02A95C",
+              backgroundColor: "#07847f",
               "&:hover": { backgroundColor: "#15803D" },
             }}
           >

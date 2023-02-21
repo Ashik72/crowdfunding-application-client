@@ -97,7 +97,7 @@ const Campaign = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="mt-8 inline-block rounded-full border-2 border-gray-900 text-lg px-8 py-3 hover:bg-green-600 hover:text-white">
+            <button className="mt-8 inline-block rounded-full border-2 border-[#07847f] text-lg px-8 py-3 transition-all duration-500 hover:bg-[#07847f] hover:text-white">
               Click Here
             </button>
           </div>

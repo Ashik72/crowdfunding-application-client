@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 function Register() {
@@ -11,6 +11,8 @@ function Register() {
     handleSubmit,
   } = useForm();
   const { createUser, modernizeProfile, signInPopUp } = useContext(AuthContext);
+  const location = useLocation();
+  let from = location.state?.from?.pathname;
   const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
   const imbbKey = "684c6274d794de1079ffad375804e558";
@@ -26,6 +28,7 @@ function Register() {
       .then((res) => res.json())
       .then((imgData) => {
         if (imgData.success) {
+          navigate(from, { replace: true });
           const userRegisterData = {
             name: data.name,
             email: data.email,
@@ -50,7 +53,7 @@ function Register() {
             .then((data) => {})
             .catch((err) => console.log(err));
         }
-        navigate("/");
+        
       });
   };
   const handleUserProfileUpdate = (name, photoURL) => {
@@ -75,6 +78,7 @@ function Register() {
       fetch("https://croudfunding-server-muradwahid.vercel.app/users")
         .then((res) => res.json())
         .then((data) => {
+          navigate(from, { replace: true });
           const postUserData = data.find(
             (post) => post.email === googleUser.email
           );

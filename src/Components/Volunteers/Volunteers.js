@@ -11,7 +11,7 @@ const Volunteers = () => {
             <div className='pt-20 pb-10'>
                 <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1">
                     <div className="">
-                        <h4 className='text-2xl font-bold pb-5 text-[#02a95c]'>
+                        <h4 className='text-2xl font-bold pb-5 text-[#07847f]'>
                             Our Volunteers
                         </h4>
                         <h2 className='text-5xl font-semibold'>

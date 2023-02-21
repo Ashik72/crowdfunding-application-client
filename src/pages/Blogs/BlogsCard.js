@@ -25,7 +25,7 @@ const BlogsCard = ({ blogCard }) => {
           details.length > 100 ? details.slice(0, 100) + '...' : details
         } </p>
         <Link to={`/details/${_id}`}>
-          <h1 className='text-green-600 text-lg font-bold py-5 flex items-center' data-aos="fade-up" >Read More <FaAngleDoubleRight className='ml-2'></FaAngleDoubleRight></h1>
+          <h1 className='text-[#07847f] text-lg font-bold py-5 flex items-center' data-aos="fade-up" >Read More <FaAngleDoubleRight className='ml-2'></FaAngleDoubleRight></h1>
         </Link>
       </div>
       <p className='text-xs text-center font-thin border-t py-3' data-aos="fade-up">{date}</p>

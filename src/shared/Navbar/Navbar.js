@@ -73,8 +73,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
           }
         >
           Home
@@ -86,8 +86,8 @@ const Navbar = () => {
           to="/about"
           className={({ isActive }) =>
             isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
           }
         >
           About
@@ -96,92 +96,120 @@ const Navbar = () => {
 
       <li className="nav-item cursor-pointer navbar-dropdown-events">
         <NavLink
-          to="#"
+          to="/pages"
           className={({ isActive }) =>
             isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
           }
         >
           pages
         </NavLink>
-        <i className="fa-solid fa-chevron-down ml-2 text-[#02A95C]"></i>
+        <i className="fa-solid fa-chevron-down ml-2 text-[#07847f]"></i>
 
         {/* dropdown menu start */}
-        <ul className="absolute px-3 pl-0 z-50 navbar-events-dropdown">
-          <li className="">
+        <ul className="absolute w-60 px-10 pl-0 z-50 navbar-events-dropdown rounded-2xl">
+          <li className="transition-all duration-300 hover:pl-4">
             <NavLink
               to="/gallery"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                  ? "nav-link border-b-2 pb-1"
                   : "nav-link"
               }
             >
               <span className="text-white">Gallery</span>
             </NavLink>
           </li>
-          <li className=" ">
-            <Link to="/blogs" className="nav-link">
+          <li className="transition-all duration-300 hover:pl-4">
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-link border-b-2 pb-1"
+                  : "nav-link"
+              }
+            >
               <span className="text-white">blogs</span>
-            </Link>
+            </NavLink>
           </li>
-          <li>
-            <Link to="/naturalDisaster" className="nav-link">
+          <li className="transition-all duration-300 hover:pl-4">
+            <NavLink
+              to="/naturalDisaster"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-link border-b-2 pb-1"
+                  : "nav-link"
+              }
+            >
               <span className="text-white">Natural Disaster</span>
-            </Link>
+            </NavLink>
           </li>
         </ul>
         {/* dropdown menu end */}
       </li>
       <li className="nav-item cursor-pointer navbar-dropdown-events">
         <NavLink
-          to="#"
+          to="/events"
           className={({ isActive }) =>
             isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
           }
         >
           Events
         </NavLink>
-        <i className="fa-solid fa-chevron-down ml-2 text-[#02A95C]"></i>
+        <i className="fa-solid fa-chevron-down ml-2 text-[#07847f]"></i>
 
         {/* dropdown menu start */}
-        <ul className="absolute px-3 pl-0 z-50 navbar-events-dropdown">
-          <li className="">
+        <ul className="absolute w-56 rounded-2xl px-3 pl-0 z-50 navbar-events-dropdown">
+          <li className="transition-all duration-300 hover:pl-4">
             <NavLink
               to="/ngosignup"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                  ? "nav-link border-b-2 pb-1"
                   : "nav-link"
               }
             >
               <span className="text-white">ngo-signup</span>
             </NavLink>
           </li>
-          <li className="">
+          <li className="transition-all duration-300 hover:pl-4">
             <NavLink
               to="/campaign"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                  ? "nav-link border-b-2 pb-1"
                   : "nav-link"
               }
             >
               <span className="text-white">Start-Campaign</span>
             </NavLink>
           </li>
-          <li className=" ">
-            <Link to="/our-events" className="nav-link">
+          <li className="transition-all duration-300 hover:pl-4">
+            <NavLink
+              to="/our-events"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-link border-b-2 pb-1"
+                  : "nav-link"
+              }
+            >
               <span className="text-white">Our Events</span>
-            </Link>
+            </NavLink>
           </li>
-          <li className="">
-            <Link to="/causes" className="nav-link">
+          <li className="transition-all duration-300 hover:pl-4">
+            <NavLink
+              to="/causes"
+              className={({ isActive }) =>
+                isActive
+                  ? "nav-link border-b-2 pb-1"
+                  : "nav-link"
+              }
+            >
               <span className="text-white">Causes</span>
-            </Link>
+            </NavLink>
           </li>
         </ul>
         {/* dropdown menu end */}
@@ -191,11 +219,23 @@ const Navbar = () => {
           to="/dashboard/user"
           className={({ isActive }) =>
             isActive
-              ? "nav-link border-b-2 border-[#02A95C] pb-1"
-              : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
           }
         >
           Dashboard
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          to="/videoChat"
+          className={({ isActive }) =>
+            isActive
+              ? "nav-link border-b-2 border-[#07847f] pb-1"
+              : "nav-link pb-1"
+          }
+        >
+          Meeting
         </NavLink>
       </li>
       {user?.uid ? (
@@ -206,8 +246,8 @@ const Navbar = () => {
               to="/register"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
-                  : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+                  ? "nav-link border-b-2 border-[#07847f] pb-1"
+                  : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
               }
             >
               Logout
@@ -221,8 +261,8 @@ const Navbar = () => {
               to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
-                  : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+                  ? "nav-link border-b-2 border-[#07847f] pb-1"
+                  : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
               }
             >
               Login
@@ -233,8 +273,8 @@ const Navbar = () => {
               to="/register"
               className={({ isActive }) =>
                 isActive
-                  ? "nav-link border-b-2 border-[#02A95C] pb-1"
-                  : "nav-link pb-1 hover:border-b-2 hover:border-[#02A95C]"
+                  ? "nav-link border-b-2 border-[#07847f] pb-1"
+                  : "nav-link pb-1 hover:border-b-2 hover:border-[#07847f]"
               }
             >
               Register

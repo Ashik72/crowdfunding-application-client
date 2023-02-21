@@ -24,7 +24,7 @@ function Causes() {
       <div className="flex flex-col w-full">
 <h3 className='text-4xl font-semibold py-4'>Our Goal</h3>
   <div className="divider">
-    <h3 className='text-5xl text-green-400 duration-300 transform hover:-translate-y-2'>{" "}
+    <h3 className='text-5xl text-[#07847f] duration-300 transform hover:-translate-y-2'>{" "}
         <FaHandsHelping />{" "}</h3>
       </div> 
   <h3>Pursue pleasure rationally encounter consequences that are extremely painful.</h3>
@@ -62,7 +62,7 @@ function Causes() {
             <h6 className="mb-2 font-semibold uppercase leading-5">Cultivate repeat givers</h6>
             <p className="text-md text-gray-900">
 						This goal may be more important than you think. After you have established a wealth of supporters, you may want to consider strategizing ways to encourage them to give again. Securing repeat donors means a significant uptake in your donation amount over time.For help on finding the right words, read our blog post 
-						<span className='text-green-400 hover:underline font-semibold'type='button'><Link to='/blogs'>Read More</Link></span>
+						<span className='text-[#07847f] hover:underline font-semibold'type='button'><Link to='/blogs'>Read More</Link></span>
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ function Causes() {
                   points="29 13 14 29 25 29 23 39 38 23 27 23"
                 />
               </svg> */}
-  <h3 className='text-4xl text-green-400 duration-300 transform hover:-translate-y-2'>{" "}
+  <h3 className='text-4xl text-[#07847f] duration-300 transform hover:-translate-y-2'>{" "}
         <FaDonate />{" "}</h3>
             </div>
             <h6 className="mb-2 font-semibold leading-5">Make Donation</h6>
@@ -123,7 +123,7 @@ function Causes() {
                   points="29 13 14 29 25 29 23 39 38 23 27 23"
                 />
               </svg> */}
-              <h3 className='text-4xl text-green-400 duration-300 transform hover:-translate-y-2'>{" "}
+              <h3 className='text-4xl text-[#07847f] duration-300 transform hover:-translate-y-2'>{" "}
         <FaHandsHelping />{" "}</h3>
             </div>
             <h6 className="mb-2 font-semibold leading-5">Become a Volunteer</h6>
@@ -146,7 +146,7 @@ function Causes() {
                   points="29 13 14 29 25 29 23 39 38 23 27 23"
                 />
               </svg> */}
-              <h3 className='text-4xl text-green-400 duration-300 transform hover:-translate-y-2'>{" "}
+              <h3 className='text-4xl text-[#07847f] duration-300 transform hover:-translate-y-2'>{" "}
         <FaWater />{" "}</h3>
             </div>
             <h6 className="mb-2 font-semibold leading-5">Food & Water Supply</h6>
@@ -169,7 +169,7 @@ function Causes() {
                   points="29 13 14 29 25 29 23 39 38 23 27 23"
                 />
               </svg> */}
-              <h3 className='text-4xl text-green-400 duration-300 transform hover:-translate-y-2'>{" "}
+              <h3 className='text-4xl text-[#07847f] duration-300 transform hover:-translate-y-2'>{" "}
         <FaEnvira />{" "}</h3>
             </div>
             <h6 className="mb-2 font-semibold leading-5">Protect Environment</h6>
@@ -586,7 +586,7 @@ function Causes() {
 	</div>
 </section>
 
-<div className="py-20 h-74 w-full my-20 bg-green-400">
+<div className="py-20 h-74 w-full my-20 bg-[#07847f]">
 	<div className="container mx-auto">
 		<div className="flex flex-col lg:flex-row items-center justify-between">
 			<h2 className="text-center w-3/4 text-6xl tracking-tighter font-bold">“Fundraising is the gentle art of teaching the joy of giving.”<FaFistRaised />

@@ -9,6 +9,7 @@ import img from "../../assets/images/heart01.png";
 import volunIcon from "../../assets/images/volunteerIcon.png";
 import CountUp from "react-countup";
 import { FaHandPointRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NaturalDisaster = () => {
   return (
@@ -22,25 +23,25 @@ const NaturalDisaster = () => {
         ></div>
         <div className="lg:w-[600px] mx-auto mt-16 ">
           <img className="w-20" src={leafImg} alt="" />
-          <p className="text-2xl mb-3 text-green-700 font-bold">
+          <p className="text-2xl mb-3 text-[#07847f] font-bold">
             {" "}
             Change The World.
           </p>
           <p className="text-6xl font-bold text-lime-600 mb-5">
             Need Your Big Hand For Change The World.
           </p>
-          <button className="btn border-none bg-green-400 mr-5">
-            All Causes
+          <button className="btn border-none bg-[#07847f] mr-5">
+            <Link to="/causes">All Causes</Link>
           </button>
-          <button className="btn border-none bg-green-400">Donate Now</button>
+          <button className="btn border-none bg-[#07847f]"><Link to="/donate">Donate Now</Link></button>
         </div>
 
         {/* banner section  */}
         <div className="py-10">
           <div className="avatar relative">
-            <div className="lg:w-[600px] rounded-full ring ring-green-700 ring-offset-base-100 ring-offset-2">
+            <div className="lg:w-[600px] rounded-full ring ring-[#07847f] ring-offset-base-100 ring-offset-2">
               <img src={naturalImg} alt="" />
-              <div className="absolute flex justify-center items-center bottom-0 border-4 w-72 h-72 rounded-full bg-lime-200 border-green-700">
+              <div className="absolute flex justify-center items-center bottom-0 border-4 w-72 h-72 rounded-full bg-lime-200 border-[#07847f]">
                 <p className="text-center text-3xl font-extrabold p-6">
                   Natural Disaster In Our Bangladesh
                 </p>
@@ -53,8 +54,8 @@ const NaturalDisaster = () => {
       {/* events */}
       <div className="lg:grid grid-cols-2 gap-0 mx-24 my-8 rounded-2xl">
         <div className="bg-lime-100 flex justify-center items-center">
-          <div className="text-xl font-semibold">
-            <p className=" px-10 text-2xl mb-3 text-green-700 font-bold flex items-center">
+          <div className="text-xl font-semibold  overflow-hidden">
+            <p className=" px-10 text-2xl mb-3 text-[#07847f] font-bold flex items-center">
               Our Events<FaHandPointRight></FaHandPointRight>
             </p>
             <p className="px-10">
@@ -74,8 +75,8 @@ const NaturalDisaster = () => {
               button!!
             </p>
             <div className="lg:mx-64 flex">
-              <button className="btn bg-lime-900 mr-6">Events</button>
-              <button className="btn bg-lime-900">Causes</button>
+              <button className="btn bg-lime-900 mr-6"><Link to="/our-events">Events</Link></button>
+              <button className="btn bg-lime-900"><Link to="/causes">Causes</Link></button>
             </div>
           </div>
         </div>
@@ -171,7 +172,7 @@ const NaturalDisaster = () => {
           <div className="border border-lime-500 p-9 bg-orange-500">
             <div className="flex items-center">
               <img className="mr-6" src={medicinImg} alt="" />
-              <p className="text-4xl font-semibold">Clean Water</p>
+              <p className="text-4xl font-semibold">Medicale Help</p>
             </div>
             <p className="pt-6 text-lg">
               Volunteering in the medical field involves providing assistance to
@@ -188,7 +189,7 @@ const NaturalDisaster = () => {
           <div className="border border-lime-500 p-9 bg-green-900">
             <div className="flex items-center">
               <img className="mr-6" src={foodImg} alt="" />
-              <p className="text-4xl font-semibold">Clean Water</p>
+              <p className="text-4xl font-semibold">Healthy Food</p>
             </div>
             <p className="pt-6 text-lg">
               Volunteering to provide healthy food is a way for individuals to
@@ -240,7 +241,7 @@ const NaturalDisaster = () => {
         <p className="text-4xl font-bold mb-3">
           "To Donate, Go To Donate Page"
         </p>
-        <button className="btn border-none bg-lime-900">Donate Now</button>
+        <button className="btn border-none bg-lime-900"><Link to="/donate">Donate Now</Link></button>
       </div>
     </div>
   );

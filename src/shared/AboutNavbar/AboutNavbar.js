@@ -72,7 +72,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     Home
@@ -82,7 +82,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/about" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     About
@@ -92,7 +92,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/gallery" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     gallery
@@ -102,7 +102,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/blogs" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     Blogs
@@ -111,7 +111,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/dashboard/user" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     Dashboard
@@ -120,7 +120,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/login" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     Login
@@ -129,7 +129,7 @@ const AboutNavbar = () => {
             <li className="nav-item">
                 <NavLink to="/signup" className={({ isActive }) =>
                     isActive
-                        ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                        ? "nav-link border-b-2 border-[#07847f] pb-1"
                         : "nav-link pb-1"
                 }>
                     Register

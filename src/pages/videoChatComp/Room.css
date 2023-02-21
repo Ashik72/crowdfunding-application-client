@@ -1,0 +1,16 @@
+.meeting-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #070626a8;
+  width: 100%;
+  right: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.meet-wrapper:hover .meeting-nav {
+  visibility: visible;
+  transition: 0.5s;
+}

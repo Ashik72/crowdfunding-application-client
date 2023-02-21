@@ -51,7 +51,7 @@ const Partners = () => {
               </p>
               <div className="card-actions justify-end">
                 <Link to={`/partners/${partner._id}`}>
-                  <button className="btn bg-green-400 text-white text-lg font-bold">
+                  <button className="btn bg-[#07847f] text-white text-lg font-bold">
                     Read More
                   </button>
                 </Link>

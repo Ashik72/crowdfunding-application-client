@@ -97,7 +97,7 @@ export default function NgoSignup() {
             </p>
             <Link
               to="/partners"
-              className="mt-8 inline-block rounded-full border-2 border-gray-900 text-lg px-8 py-3 hover:bg-green-600 hover:text-white"
+              className="mt-8 inline-block rounded-full border-2 border-[#07847f] text-lg px-8 py-3 transition-all duration-500 hover:border-[#07847f] hover:bg-[#07847f] hover:text-white"
             >
               Our Accredited Partners
             </Link>
@@ -262,7 +262,7 @@ export default function NgoSignup() {
                         type="text"
                         name="organigationName"
                         placeholder="Type here"
-                        className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
+                        className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-[#07847f] w-full ease-linear transition-all duration-150"
                       />
                     </div>
                     {/* PhotoURL */}
@@ -295,7 +295,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="userName"
-                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-[#07847f] w-full ease-linear transition-all duration-150"
                             placeholder="ucky jesse"
                           />
                         </div>
@@ -311,7 +311,7 @@ export default function NgoSignup() {
                           <input
                             type="email"
                             name="email"
-                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-[#07847f] w-full ease-linear transition-all duration-150"
                             placeholder="jesse@example.com"
                           />
                         </div>
@@ -329,7 +329,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="firstName"
-                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-[#07847f] w-full ease-linear transition-all duration-150"
                             placeholder="Lucky"
                           />
                         </div>
@@ -345,7 +345,7 @@ export default function NgoSignup() {
                           <input
                             type="text"
                             name="lastName"
-                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-green-500 w-full ease-linear transition-all duration-150"
+                            className="border border-gray-700 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-[#07847f] w-full ease-linear transition-all duration-150"
                             placeholder="Jesse"
                           />
                         </div>
@@ -365,7 +365,7 @@ export default function NgoSignup() {
                         id="about"
                         name="decs"
                         rows={3}
-                        className="mt-1 block w-full border border-gray-800 rounded-md shadow-sm  focus:outline-green-500 sm:text-sm"
+                        className="mt-1 block w-full border border-gray-800 rounded-md shadow-sm  focus:outline-[#07847f] sm:text-sm"
                         placeholder=""
                         defaultValue={""}
                       />
@@ -418,7 +418,7 @@ export default function NgoSignup() {
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-green-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-[#07847f] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Save
                   </button>

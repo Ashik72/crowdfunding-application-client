@@ -432,7 +432,7 @@ const FirstStep = () => {
           (zip && zip.length > 10) ? (
             <Button
               sx={{
-                backgroundColor: "#02A95C",
+                backgroundColor: "#07847f",
                 "&:hover": { backgroundColor: "#15803D" },
               }}
               variant="contained"
@@ -446,7 +446,7 @@ const FirstStep = () => {
           ) : (
             <Button
               sx={{
-                backgroundColor: "#02A95C",
+                backgroundColor: "#07847f",
                 "&:hover": { backgroundColor: "#15803D" },
               }}
               variant="contained"

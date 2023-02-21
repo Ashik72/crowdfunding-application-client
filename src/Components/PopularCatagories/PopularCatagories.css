@@ -11,7 +11,7 @@
 .span:after {
     content: "";
     position: absolute;
-    border-right: 4px solid #02a95c;
+    border-right: 4px solid #07847f;
     width: 0%;
     height: 0%;
     bottom: 0;
@@ -27,7 +27,7 @@
 .custm-icon:after {
     content: "";
     position: absolute;
-    border-bottom: 4px solid #02a95c;
+    border-bottom: 4px solid #07847f;
     width: 0%;
     right: 0;
     height: 3px;

@@ -1,63 +1,94 @@
-.custom-border {
-    box-shadow: 0px 0px 4px 0px #02a95c;
-    margin-bottom: 25px;
-    transition: .7s !important;
+.events-box {
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
 }
 
-.box img {
-    overflow: hidden !important;
+.images-border {
+  box-shadow: -10px 10px 0px #07847f;
 }
 
-.custom-border:hover .box {
-    transform: scale(1.5);
-    transition: .5s;
+/* Recent event */
+.events-box-images {
+  position: relative;
+  background-image: url("https://i.ibb.co/VVK1ZS7/sanjoy-sadhukhan-Wh-E7-KK-HPm-Y-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  max-width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  animation: kenburns 20s infinite;
 }
 
-.join_img {
-    position: relative;
-    width: 100%;
-    z-index: 0;
-}
-
-.join_img::after {
-    /* border-radius: 150px 0px 100px 0px; */
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #0a0b0b62;
-    z-index: 1;
-}
-
-.custom__reactIcon {
-    z-index: 15 !important;
-}
-
-.join_img .custom__reactIcon {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    border-radius: 150px;
-    box-shadow: 0px 0px 4px 0px #02a95c;
-}
-
-.custom__reactIcon:hover {
-    background: #02a95c;
-    transform: scale(1.5);
-    transition: .5s;
-}
-
-.video-icons-animations {
-    animation: project-btn-animation 2s infinite;
-    border-radius: 100%;
+@keyframes kenburns {
+  0% {
+    opacity: 0;
   }
-  @keyframes project-btn-animation {
-    0% {
-      box-shadow: 0 0 0 0 #ffffff;
-    }
-    100% {
-      box-shadow: 0 0 0 15px transparent;
-    }
+  5% {
+    opacity: 1;
   }
+  95% {
+    transform: scale3d(1.5, 1.5, 1.5) translate3d(-10%, 0%, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(2, 2, 2) translate3d(-5%, 0%, 0px);
+    opacity: 0;
+  }
+}
+
+.events-box-images::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+.events-icon-wrap {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.events-box-icon {
+  font-size: 20px;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  animation: project-btn-animation 2s infinite;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: #07847f;
+}
+
+@keyframes project-btn-animation {
+  0% {
+    box-shadow: 0 0 0 0 #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 0 15px transparent;
+  }
+}
+
+/* event-left-image */
+
+.event-left-image {
+  box-shadow: 7px 7px 1px #07847f;
+}

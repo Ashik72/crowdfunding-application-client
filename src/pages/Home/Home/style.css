@@ -116,7 +116,7 @@ body {
 
 /* donate-hero-article */
 .donate-hero-article {
-  border: 2px solid #02a95b79;
+  border: 2px solid #07847f;
   padding: 15px;
   transition: 0.5s all ease-in-out;
   position: relative;
@@ -412,7 +412,7 @@ button.subscribe-btn {
   width: 100%;
   transition: 0.5s;
   padding: 5px 0px !important;
-  border-bottom: 4px solid #02a95c;
+  border-bottom: 4px solid #07847f;
 }
 
 .sticky .nav-item .nav-link {
@@ -434,7 +434,7 @@ button.subscribe-btn {
   padding: 15px 30px;
   border-radius: 30px;
   box-shadow: 1px 1px 1pc rgba(255, 255, 255, 0.514);
-  background: #02a95c;
+  background: #07847f;
   color: rgb(255, 255, 255);
   transition: 0.3s all ease-in-out;
   text-transform: capitalize !important;
@@ -453,7 +453,7 @@ button.subscribe-btn {
   padding: 15px 30px;
   border-radius: 5px;
   box-shadow: 1px 1px 1pc rgb(95, 93, 93);
-  background: #02a95c;
+  background: #07847f;
   color: rgb(255, 254, 254);
   overflow: hidden;
 }

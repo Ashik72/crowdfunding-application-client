@@ -98,7 +98,7 @@ const SingleBlog = () => {
               </h1>
 
               <p
-                className="border rounded-lg p-9 text-lg text-white bg-green-600"
+                className="border rounded-lg p-9 text-lg text-white bg-[#07847f]"
                 data-aos="fade-up"
               >
                 {singleBlog.ourWorks}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/PwTHV0M/m.jpg",
+    "name": "Murad Wahid",
+    "Position": "COO",
+    "COO": "Chief operating officer"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/cxknzpH/1676542504467.jpg",
+    "name": "Rocky Islam",
+    "Position": "CEO",
+    "CEO": "Chief executive officer"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/RbRKRFJ/1676541809603.jpg",
+    "name": "Rakibul Islam",
+    "Position": "CFO",
+    "CFO": "Chief financial officer"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/cxknzpH/1676542504467.jpg",
+    "name": "Asiquzzaman",
+    "Position": "COO",
+    "COO": "Chief operating officer"
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/RbRKRFJ/1676541809603.jpg",
+    "name": "Sabikun Nahar",
+    "Position": "CMO",
+    "CMO": "Chief medical Officer"
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/cxknzpH/1676542504467.jpg",
+    "name": "Zakaria Mahmud",
+    "Position": "CMO",
+    "CMO": "Chief marketing officer"
+  }
+]

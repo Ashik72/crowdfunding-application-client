@@ -4,7 +4,7 @@ import bg from "../../Components/assets/child help/1.jpg";
 const avatar ="https://www.cdc.gov/cancer/prostate/images/man-750.jpg?_=76964"
 const CunstomDonationSection = () => {
   return (
-    <div className="bg-[#02a95c] mt-[1450px] sm:mt-[1100px] md:mt-[650px] lg:mt-[0px]  text-white overflow-x-hidden">
+    <div className="bg-[#07847f] mt-[1450px] sm:mt-[1100px] md:mt-[650px] lg:mt-[0px]  text-white overflow-x-hidden">
       <div className="grid max-w-[100%] lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
         <div className="">
           <div className="divider mb-7 text-xl font-semibold  before:bg-white after:bg-white">
@@ -41,7 +41,7 @@ const CunstomDonationSection = () => {
           </div>
         </div>
         <div className="">
-          <img src={bg} alt="" />
+          <img src={bg} alt="" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500" />
           <div className="mt-10 ml-2">
             <h1 className="text-4xl py-5 font-semibold ">Great Donners</h1>
             <p className="text-lg font-semibold mb-7">

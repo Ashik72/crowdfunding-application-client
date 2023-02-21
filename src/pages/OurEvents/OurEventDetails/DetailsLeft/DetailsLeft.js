@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const eventCardImg = 'https://bdevs.net/wp/donakion/wp-content/uploads/2021/10/cause19.jpg';
-const img1 = "https://i.ibb.co/JcgvNhG/event-small1.jpg";
-const img2 ="https://i.ibb.co/KDpwgrM/event-small2.jpg"
 const DetailsLeft = ({event}) => {
   const { _id, tittle, image, date, location, dis } = event;
   return (
@@ -30,7 +27,7 @@ const DetailsLeft = ({event}) => {
 
             </div>
             <div className='mt-8'>
-              <Link className="bg-gradient-to-t from-green-700 to-green-400 py-3 px-5 text-[17px] font-semibold text-gray-200">Donate Now</Link>
+              <Link to="/donate" className="bg-gradient-to-t from-green-700 to-green-400 py-3 px-5 text-[17px] font-semibold text-gray-200">Donate Now</Link>
             </div>
           </div>
         </div>

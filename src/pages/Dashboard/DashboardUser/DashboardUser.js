@@ -46,19 +46,19 @@ const DashboardUser = () => {
           <div className="dashboardUserImgParent">
             <img src={user?.photoURL} className="dashboardUserImg" alt="" />
           </div>
-          <div className="mr-[68px] h-44 w-44 border-b-[6px] border-[#5764ec] tranform -rotate-[47deg] "></div>
-          <div className="h-44 w-44 border-[#5764ec] border-b-[6px] border-r-[6px] transform rotate-45 "></div>
-          <div className="ml-[68px] h-44 w-44 border-b-[6px] border-[#5764ec] tranform rotate-[47deg]"></div>
+          <div className="mr-[68px] -mt-[96px] h-44 w-44 border-b-[6px] border-[#5764ec] tranform -rotate-[47deg] "></div>
+          <div className="-mt-[96px] h-44 w-44 border-[#5764ec] border-b-[6px] border-r-[6px] transform rotate-45 "></div>
+          <div className="ml-[68px] -mt-[96px] h-44 w-44 border-b-[6px] border-[#5764ec] tranform rotate-[47deg]"></div>
           <p className="text-slate-800 font-semibold font-serif z-50 absolute top-48 left-[340px]">
             {user?.displayName}
           </p>
-          <p className="text-slate-800 z-50 absolute top-48 right-[340px]">
+          <p className="text-slate-800 z-50 absolute xxl:right-[390px] top-48 md:right-[340px]">
             <span>Total Donate:</span> ${userData?.amount}
           </p>
           <p className=" text-slate-800 z-50 absolute top-56 left-[340px]">
             <span className="font-semibold font-serif text-[#5764ec]">
               Address:
-            </span>{" "}
+            </span>
             {userData?.address}
           </p>
         </div>

@@ -27,6 +27,9 @@ import OurEvents from "../pages/OurEvents/OurEvents";
 import PartnerDetails from "../pages/PartnerDetails/PartnerDetails";
 import Partners from "../pages/Partners/Partners";
 import Register from "../pages/Register/Register";
+import VideoChat from "../pages/videoChat/VideoChat";
+import Room from "../pages/videoChatComp/Room";
+import PrivetRouter from "./PrivetRouter";
 
 export const router = createBrowserRouter([
   {
@@ -61,20 +64,23 @@ export const router = createBrowserRouter([
 
       {
         path: "/campaign",
-        element: <Campaign></Campaign>,
+        element: <PrivetRouter><Campaign></Campaign></PrivetRouter>,
       },
       {
         path: "/campaignshow",
         element: <CampaignShow></CampaignShow>,
       },
-
+      {
+        path: "/videoChat",
+        element: <PrivetRouter><VideoChat /></PrivetRouter>,
+      },
       {
         path: "/donate",
-        element: <Donate />,
+        element: <PrivetRouter><Donate /></PrivetRouter>,
       },
       {
         path: "/ngosignup",
-        element: <NgoSignup />,
+        element: <PrivetRouter><NgoSignup/></PrivetRouter>,
       },
       {
         path: "/partners",
@@ -101,7 +107,7 @@ export const router = createBrowserRouter([
           ),
       },
       {
-        path: "causes",
+        path: "/causes",
         element: <Causes />,
       },
       {
@@ -112,18 +118,18 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: <PrivetRouter><DashboardLayout /></PrivetRouter>,
     children: [
-      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/dashboard", element: <PrivetRouter> <Dashboard /></PrivetRouter> },
       // {path:"overview",element:<DashboardOverview/>},
-      { path: "user", element: <DashboardUser /> },
-      { path: "activity", element: <DashboardActivities /> },
-      { path: "bankdonors", element: <DashboardBankDonation /> },
-      { path: "donors", element: <DashboardDonors /> },
-      { path: "overview", element: <DashboardOverview /> },
-      { path: "admin", element: <DashboardAdmin /> },
-      { path: "posts", element: <DashboardPosts /> },
-      { path: "bkash", element: <DashboardBkashDonation /> },
+      { path: "user", element: <PrivetRouter><DashboardUser /></PrivetRouter> },
+      { path: "activity", element: <PrivetRouter><DashboardActivities /></PrivetRouter> },
+      { path: "bankdonors", element: <PrivetRouter><DashboardBankDonation /></PrivetRouter> },
+      { path: "donors", element: <PrivetRouter><DashboardDonors /></PrivetRouter> },
+      { path: "overview", element: <PrivetRouter><DashboardOverview /></PrivetRouter> },
+      { path: "admin", element: <PrivetRouter><DashboardAdmin /></PrivetRouter> },
+      { path: "posts", element: <PrivetRouter><DashboardPosts /></PrivetRouter> },
+      { path: "bkash", element: <PrivetRouter><DashboardBkashDonation /></PrivetRouter> },
     ],
   },
   {
@@ -133,5 +139,10 @@ export const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/room",
+    element: <PrivetRouter><Room /></PrivetRouter>,
+    children: [{ path: "/room/:ID", element: <Room /> }],
   },
 ]);

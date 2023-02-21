@@ -106,7 +106,7 @@ function UserMenu() {
                   to="/register"
                   className={({ isActive }) =>
                     isActive
-                      ? "nav-link border-b-2 border-[#02A95C] pb-1"
+                      ? "nav-link border-b-2 border-[#07847f] pb-1"
                       : "nav-link pb-1"
                   }
                 >

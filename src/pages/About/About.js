@@ -160,7 +160,7 @@ export default function About() {
           </div>
           <div className="p-6 flex justify-center">
             <Link to="/gallery">
-              <button className="block mb-4 px-4 py-3 text-sm font-bold rounded-full no-underline hover:shadow-md bg-green-600 text-white">
+              <button className="block mb-4 px-4 py-3 text-sm font-bold rounded-full no-underline hover:shadow-md bg-[#07847f] text-white">
                 See More
               </button>
             </Link>

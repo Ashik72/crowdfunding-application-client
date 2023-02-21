@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 function LogIn() {
@@ -11,20 +11,26 @@ function LogIn() {
     handleSubmit,
   } = useForm();
   const { signInPopUp } = useContext(AuthContext);
-  const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
   const handleLogin = (data) => {
     console.log(data);
   };
   const googleSignIn = () => {
-    signInPopUp(googleProvider).then((result) => {
+    signInPopUp(googleProvider)
+      .then((result) => {
       const googleUser = result.user;
+      if (googleUser.uid) {
+        navigate(from, { replace: true });
+      }
       const userData = {
         name: googleUser.displayName,
         email: googleUser.email,
         image: googleUser.photoURL,
       };
-      console.log(result);
+      console.log(googleUser);
       fetch("https://croudfunding-server-muradwahid.vercel.app/users")
         .then((res) => res.json())
         .then((data) => {

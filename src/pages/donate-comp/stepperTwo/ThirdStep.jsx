@@ -41,7 +41,7 @@ const ThirdStep = () => {
             variant="contained "
             onClick={() => setCurrentStepData(1)}
             sx={{
-              backgroundColor: "#02A95C",
+              backgroundColor: "#07847f",
               color: "#fff",
               mt: 1,
               "&:hover": { backgroundColor: "#15803D" },
