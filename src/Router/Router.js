@@ -20,6 +20,7 @@ import Pie from "../pages/Dashboard/Pie";
 import Team from "../pages/Dashboard/Team";
 
 import Donate from "../pages/donate/Donate";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
 import LogIn from "../pages/LogIn/LogIn";
@@ -216,92 +217,6 @@ export const router = createBrowserRouter([
         ),
       },
     ],
-    // children: [
-    //   {
-    //     path: "/",
-    //     element: (
-    //       <PrivetRouter>
-    //         {" "}
-    //         <Dashboard />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   // {path:"overview",element:<DashboardOverview/>},
-    //   {
-    //     path: "team",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Dashboard />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "contacts",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Contacts />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "invoices",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Invoices />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "form",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Form />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "bar",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Bar />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "pie",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Pie />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "line",
-    //     element: (
-    //       <PrivetRouter>
-    //         <Line />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    //   {
-    //     path: "faq",
-    //     element: (
-    //       <PrivetRouter>
-    //         <FAQ />
-    //       </PrivetRouter>
-    //     ),
-    //   },
-    // ],
-
-    // <Route path="/dashboard" element={<Dashboard />} />
-    //           <Route path="/team" element={<Team />} />
-    //           <Route path="/contacts" element={<Contacts />} />
-    //           <Route path="/invoices" element={<Invoices />} />
-    //           <Route path="/form" element={<Form />} />
-    //           <Route path="/bar" element={<Bar />} />
-    //           <Route path="/pie" element={<Pie />} />
-    //           <Route path="/line" element={<Line />} />
-    //           <Route path="/faq" element={<FAQ />} />
   },
   {
     path: "/login",
@@ -319,5 +234,9 @@ export const router = createBrowserRouter([
       </PrivetRouter>
     ),
     children: [{ path: "/room/:ID", element: <Room /> }],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+.page {
+  background: #fff;
+  padding: 38px 0;
+  font-family: "Arvo", serif;
+}
+
+.bg {
+  background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
+  background-position: center;
+  height: 598px;
+  width: 100%;
+}
+
+.bg h1 {
+  font-size: 78px;
+}
+
+.bg h3 {
+  font-size: 78px;
+}
+
+/* .content_box {
+  margin-top: -48px;
+} */

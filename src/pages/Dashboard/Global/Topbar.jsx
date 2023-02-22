@@ -132,7 +132,7 @@ const Topbar = () => {
                     ) : (
                       <LightModeOutlinedIcon />
                     )}
-                    <h1 className="text-slate-900 text-sm	">Dark/Light</h1>
+                    <h1 className="text-slate-900 text-sm">Dark/Light</h1>
                   </IconButton>
                 </li>
                 {/*------------------------- Logout system ------------------ */}
