@@ -113,9 +113,7 @@ const Navbar = () => {
             <NavLink
               to="/gallery"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">Gallery</span>
@@ -125,9 +123,7 @@ const Navbar = () => {
             <NavLink
               to="/blogs"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">blogs</span>
@@ -137,9 +133,7 @@ const Navbar = () => {
             <NavLink
               to="/naturalDisaster"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">Natural Disaster</span>
@@ -167,9 +161,7 @@ const Navbar = () => {
             <NavLink
               to="/ngosignup"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">ngo-signup</span>
@@ -179,9 +171,7 @@ const Navbar = () => {
             <NavLink
               to="/campaign"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">Start-Campaign</span>
@@ -191,9 +181,7 @@ const Navbar = () => {
             <NavLink
               to="/our-events"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">Our Events</span>
@@ -203,9 +191,7 @@ const Navbar = () => {
             <NavLink
               to="/causes"
               className={({ isActive }) =>
-                isActive
-                  ? "nav-link border-b-2 pb-1"
-                  : "nav-link"
+                isActive ? "nav-link border-b-2 pb-1" : "nav-link"
               }
             >
               <span className="text-white">Causes</span>
@@ -216,7 +202,7 @@ const Navbar = () => {
       </li>
       <li className="nav-item">
         <NavLink
-          to="/dashboard/user"
+          to="/dashboard"
           className={({ isActive }) =>
             isActive
               ? "nav-link border-b-2 border-[#07847f] pb-1"

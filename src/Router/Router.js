@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import DashboardLayout from "../layout/DashboardLayout/DashboardLayout";
+import DashboardLayout from "../layout/DashboardLayout";
+
 import Main from "../layout/Main";
 import About from "../pages/About/About";
 import Blogs from "../pages/Blogs/Blogs";
@@ -7,15 +8,17 @@ import SingleBlog from "../pages/Blogs/SingleBlog/SingleBlog";
 import Campaign from "../pages/Campaign/Campaign";
 import CampaignShow from "../pages/Campaign/CampaignShow/CampaignShow";
 import Causes from "../pages/Causes/Causes";
-import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
-import DashboardActivities from "../pages/Dashboard/DashboardActivities/DashboardActivities";
-import DashboardAdmin from "../pages/Dashboard/DashboardAdmin/DashboardAdmin";
-import DashboardBankDonation from "../pages/Dashboard/DashboardBankDonation/DashboardBankDonation";
-import DashboardBkashDonation from "../pages/Dashboard/DashboardBkashDonation/DashboardBkashDonation";
-import DashboardDonors from "../pages/Dashboard/DashboardDonors/DashboardDonors";
-import DashboardOverview from "../pages/Dashboard/DashboardOverview/DashboardOverview";
-import DashboardPosts from "../pages/Dashboard/DashboardPosts/DashboardPosts";
-import DashboardUser from "../pages/Dashboard/DashboardUser/DashboardUser";
+import Bar from "../pages/Dashboard/Bar";
+import Contacts from "../pages/Dashboard/Contacts";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import FAQ from "../pages/Dashboard/Faq";
+import Form from "../pages/Dashboard/Form";
+import Geography from "../pages/Dashboard/Geography";
+import Invoices from "../pages/Dashboard/Invoices";
+import Line from "../pages/Dashboard/Line";
+import Pie from "../pages/Dashboard/Pie";
+import Team from "../pages/Dashboard/Team";
+
 import Donate from "../pages/donate/Donate";
 import Gallery from "../pages/Gallery/Gallery";
 import Home from "../pages/Home/Home/Home";
@@ -64,7 +67,11 @@ export const router = createBrowserRouter([
 
       {
         path: "/campaign",
-        element: <PrivetRouter><Campaign></Campaign></PrivetRouter>,
+        element: (
+          <PrivetRouter>
+            <Campaign></Campaign>
+          </PrivetRouter>
+        ),
       },
       {
         path: "/campaignshow",
@@ -72,15 +79,27 @@ export const router = createBrowserRouter([
       },
       {
         path: "/videoChat",
-        element: <PrivetRouter><VideoChat /></PrivetRouter>,
+        element: (
+          <PrivetRouter>
+            <VideoChat />
+          </PrivetRouter>
+        ),
       },
       {
         path: "/donate",
-        element: <PrivetRouter><Donate /></PrivetRouter>,
+        element: (
+          <PrivetRouter>
+            <Donate />
+          </PrivetRouter>
+        ),
       },
       {
         path: "/ngosignup",
-        element: <PrivetRouter><NgoSignup/></PrivetRouter>,
+        element: (
+          <PrivetRouter>
+            <NgoSignup />
+          </PrivetRouter>
+        ),
       },
       {
         path: "/partners",
@@ -118,19 +137,171 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <PrivetRouter><DashboardLayout /></PrivetRouter>,
+    element: (
+      <PrivetRouter>
+        <DashboardLayout />
+      </PrivetRouter>
+    ),
     children: [
-      { path: "/dashboard", element: <PrivetRouter> <Dashboard /></PrivetRouter> },
-      // {path:"overview",element:<DashboardOverview/>},
-      { path: "user", element: <PrivetRouter><DashboardUser /></PrivetRouter> },
-      { path: "activity", element: <PrivetRouter><DashboardActivities /></PrivetRouter> },
-      { path: "bankdonors", element: <PrivetRouter><DashboardBankDonation /></PrivetRouter> },
-      { path: "donors", element: <PrivetRouter><DashboardDonors /></PrivetRouter> },
-      { path: "overview", element: <PrivetRouter><DashboardOverview /></PrivetRouter> },
-      { path: "admin", element: <PrivetRouter><DashboardAdmin /></PrivetRouter> },
-      { path: "posts", element: <PrivetRouter><DashboardPosts /></PrivetRouter> },
-      { path: "bkash", element: <PrivetRouter><DashboardBkashDonation /></PrivetRouter> },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/dashboard/team",
+        element: <Team />,
+      },
+      {
+        path: "/dashboard/contacts",
+        element: <Contacts />,
+      },
+      // {
+      //   path: "/dashboard/calendar",
+      //   element: <Calendar />,
+      // },
+      {
+        path: "/dashboard/invoices",
+        element: (
+          <PrivetRouter>
+            <Invoices />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/form",
+        element: (
+          <PrivetRouter>
+            <Form />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/bar",
+        element: (
+          <PrivetRouter>
+            <Bar />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/pie",
+        element: (
+          <PrivetRouter>
+            <Pie />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/geography",
+        element: (
+          <PrivetRouter>
+            <Geography />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/line",
+        element: (
+          <PrivetRouter>
+            <Line />
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "/dashboard/faq",
+        element: (
+          <PrivetRouter>
+            <FAQ />
+          </PrivetRouter>
+        ),
+      },
     ],
+    // children: [
+    //   {
+    //     path: "/",
+    //     element: (
+    //       <PrivetRouter>
+    //         {" "}
+    //         <Dashboard />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   // {path:"overview",element:<DashboardOverview/>},
+    //   {
+    //     path: "team",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Dashboard />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "contacts",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Contacts />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "invoices",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Invoices />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "form",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Form />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "bar",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Bar />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "pie",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Pie />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "line",
+    //     element: (
+    //       <PrivetRouter>
+    //         <Line />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    //   {
+    //     path: "faq",
+    //     element: (
+    //       <PrivetRouter>
+    //         <FAQ />
+    //       </PrivetRouter>
+    //     ),
+    //   },
+    // ],
+
+    // <Route path="/dashboard" element={<Dashboard />} />
+    //           <Route path="/team" element={<Team />} />
+    //           <Route path="/contacts" element={<Contacts />} />
+    //           <Route path="/invoices" element={<Invoices />} />
+    //           <Route path="/form" element={<Form />} />
+    //           <Route path="/bar" element={<Bar />} />
+    //           <Route path="/pie" element={<Pie />} />
+    //           <Route path="/line" element={<Line />} />
+    //           <Route path="/faq" element={<FAQ />} />
   },
   {
     path: "/login",
@@ -142,7 +313,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/room",
-    element: <PrivetRouter><Room /></PrivetRouter>,
+    element: (
+      <PrivetRouter>
+        <Room />
+      </PrivetRouter>
+    ),
     children: [{ path: "/room/:ID", element: <Room /> }],
   },
 ]);
