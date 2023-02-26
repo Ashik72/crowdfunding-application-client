@@ -17,7 +17,7 @@ const FinalStepperDataGet = () => {
 
   // console.log(userDonateData);
 
-  // fetch("http://localhost:5000/payment/", {
+  // fetch("https://croudfunding-server.vercel.app/payment/", {
   //   method: "POST",
   //   headers: {
   //     "content-type": "application/json",

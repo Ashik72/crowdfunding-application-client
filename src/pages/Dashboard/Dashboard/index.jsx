@@ -1,7 +1,6 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
@@ -13,11 +12,29 @@ import { mockTransactions } from "../../../data/mockData";
 import ProgressCircle from "../../../Components/ProgressCircle";
 import BarChart from "../../../Components/BarChart";
 import GeographyChart from "../../../Components/GeographyChart";
-
+import { useQuery } from "@tanstack/react-query";
+import useDonors from "../../../hooks/useDonors/useDonors";
 const Dashboard = () => {
+  const [allDonors] = useDonors();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { data: donationsData,isLoading } = useQuery({
+    queryKey: ['donate'],
+    queryFn: async () => {
+      const res = await fetch('https://croudfunding-server-muradwahid.vercel.app/donate')
+      const data = await res.json();
+      return data;
+    }
+  })
+  let dataItems = donationsData?.map(single => single.amount)
+  let totalAmount = dataItems?.reduce((accu, curr) => Number(accu) + Number(curr));
 
+  const totalDonors = allDonors?.length
+  if (isLoading) {
+    return <div className="flex justify-center mt-52">
+      <p>Loading.......</p>
+    </div>
+  }
   return (
     <Box mx="20px">
       {/* HEADER */}
@@ -56,7 +73,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="$59,342.32"
+            title={`$${totalAmount}`}
             subtitle="Total Available Balance"
             progress="0.75"
             increase="+14%"
@@ -75,7 +92,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="431,225"
+            title={`${totalDonors}`}
             subtitle="Total Donars"
             progress="0.50"
             increase="+21%"
@@ -94,7 +111,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="32,441"
+            title={`${totalDonors}`}
             subtitle="New Donars"
             progress="0.30"
             increase="+5%"
@@ -113,7 +130,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="$1,325,134"
+            title={`$${totalAmount}`}
             subtitle="Total Balance Received"
             progress="0.80"
             increase="+43%"
@@ -151,7 +168,7 @@ const Dashboard = () => {
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                $59,342.32
+                ${totalAmount}
               </Typography>
             </Box>
             <Box>
@@ -184,9 +201,9 @@ const Dashboard = () => {
               Recent Transactions
             </Typography>
           </Box>
-          {mockTransactions.map((transaction, i) => (
+          {donationsData?.map((transaction, i) => (
             <Box
-              key={`${transaction.txId}-${i}`}
+              key={`${transaction._id}-${i}`}
               display="flex"
               justifyContent="space-between"
               alignItems="center"
@@ -197,13 +214,14 @@ const Dashboard = () => {
                 <Typography
                   color={colors.greenAccent[500]}
                   variant="h5"
-                  fontWeight="600"
+                  fontWeight="500"
+                  fontSize='14px'
                 >
-                  {transaction.txId}
+                  {transaction.fullName}
                 </Typography>
-                <Typography color={colors.grey[100]}>
-                  {transaction.user}
-                </Typography>
+                {/* <Typography color={colors.grey[100]}>
+                  {transaction.date}
+                </Typography> */}
               </Box>
               <Box color={colors.grey[100]}>{transaction.date}</Box>
               <Box
@@ -211,7 +229,7 @@ const Dashboard = () => {
                 p="5px 10px"
                 borderRadius="4px"
               >
-                ${transaction.cost}
+                ${transaction.amount}
               </Box>
             </Box>
           ))}

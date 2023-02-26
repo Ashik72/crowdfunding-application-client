@@ -9,9 +9,6 @@ const SecondStep = () => {
     user,
     setCurrentStepData,
     userData,
-    setUserData,
-    submitStepperFinalData,
-    stepperFinalData,
   } = useContext(AuthContext);
   const handleUserDonationData = (e) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
@@ -22,7 +19,9 @@ const SecondStep = () => {
       fullName: userData.fName + " " + userData.lName,
       amount: userData.amount,
       email: userData.email,
+      city: userData.city,
       address: userData.address,
+      number:userData.number,
       cardHolderName: userData.cardType,
       paymentType: userData.payment,
       image: user?.photoURL,

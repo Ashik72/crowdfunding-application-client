@@ -1,33 +1,21 @@
-import { Box } from "@mui/material";
+import { Avatar, Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
 import { useTheme } from "@mui/material";
 import { tokens } from "../../../theme";
 import Header from "../../../Components/Header";
-import { mockDataContacts } from "../../../data/mockData";
+import useDonors from "../../../hooks/useDonors/useDonors";
 
 const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  const [allDonors, donorsLoader] = useDonors();
+  console.log(allDonors);
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
+    {field:'image',headerName:"PHOTO",width:60,renderCell:(params)=><Avatar src={params.row.image} />,sortable:false,filterAble:false},
+    { field: "fullName", headerName: "Name", flex: 1, cellClassName: "name-column--cell", },
     {
-      field: "name",
-      headerName: "Name",
-      flex: 1,
-      cellClassName: "name-column--cell",
-    },
-    {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-    },
-    {
-      field: "phone",
+      field: "number",
       headerName: "Phone Number",
       flex: 1,
     },
@@ -47,17 +35,21 @@ const Contacts = () => {
       flex: 1,
     },
     {
-      field: "zipCode",
-      headerName: "Zip Code",
+      field: 'amount',
+      headerName: "$ Amount",
       flex: 1,
     },
   ];
-
+  if (donorsLoader) {
+    return <div className="flex justify-center mt-52">
+      <p>Loading.......</p>
+    </div>
+}
   return (
     <Box m="20px">
       <Header
-        title="CONTACTS"
-        subtitle="List of Contacts for Future Reference"
+        title="DONORS"
+        subtitle="List of Donors Info"
       />
       <Box
         m="40px 0 0 0"
@@ -92,8 +84,9 @@ const Contacts = () => {
         }}
       >
         <DataGrid
-          rows={mockDataContacts}
+          rows={allDonors}
           columns={columns}
+          getRowId={(rows) => rows._id}
           components={{ Toolbar: GridToolbar }}
         />
       </Box>
