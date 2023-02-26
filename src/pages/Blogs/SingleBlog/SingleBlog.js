@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import {
   FaCalculator,
   FaAngleRight,
@@ -8,7 +8,6 @@ import {
   FaLinkedin,
   FaWhatsappSquare,
 } from "react-icons/fa";
-// import img2 from "../../../images/working.jpg";
 import "../Blogs.css";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
@@ -16,7 +15,6 @@ import toast from "react-hot-toast";
 const SingleBlog = () => {
   const { user } = useContext(AuthContext);
   const singleBlog = useLoaderData();
-  const navigate = useNavigate();
 
   const [update, setUpdate] = useState(false);
 

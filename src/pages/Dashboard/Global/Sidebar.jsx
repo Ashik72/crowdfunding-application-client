@@ -3,7 +3,6 @@ import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import logo from "../../../assets/logo/logo1.png";
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -86,7 +85,11 @@ const Sidebar = () => {
               >
                 <Typography variant="h3" color={colors.grey[100]}>
                   <Link to="/">
-                    <img className="w-32" alt="" src={logo} />
+                    <img
+                      className="w-32"
+                      alt=""
+                      src={"https://i.postimg.cc/htkxHSDc/logo1.png"}
+                    />
                   </Link>
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>

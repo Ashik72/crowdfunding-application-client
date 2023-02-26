@@ -8,7 +8,7 @@ import FinalStepperDataGet from "../stepperTwo/stepContext/FinalStepperDataGet";
 import ThirdStep from "../stepperTwo/ThirdStep";
 
 const CharitableUser = () => {
-  const { currentStepData, stepperFinalData } = useContext(AuthContext);
+  const { currentStepData } = useContext(AuthContext);
 
   const steps = ["User information", "Billing Information", "Complete"];
 

@@ -1,12 +1,12 @@
 import React from "react";
-import naturalImg from "../../assets/images/naturalDisaster.jpg";
-import leafImg from "../../assets/images/fulles.png";
-import waterImg from "../../assets/images/water-drop.png";
-import medicinImg from "../../assets/images/medicine.png";
-import foodImg from "../../assets/images/food.png";
-import volnImg from "../../assets/images/volunteer.jpg";
-import img from "../../assets/images/heart01.png";
-import volunIcon from "../../assets/images/volunteerIcon.png";
+// import naturalImg from "../../assets/images/naturalDisaster.jpg";
+// import leafImg from "../../assets/images/fulles.png";
+// import waterImg from "../../assets/images/water-drop.png";
+// import medicinImg from "../../assets/images/medicine.png";
+// import foodImg from "../../assets/images/food.png";
+// import volnImg from "../../assets/images/volunteer.jpg";
+// import img from "../../assets/images/heart01.png";
+// import volunIcon from "../../assets/images/volunteerIcon.png";
 import CountUp from "react-countup";
 import { FaHandPointRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -22,7 +22,11 @@ const NaturalDisaster = () => {
           }}
         ></div>
         <div className="lg:w-[600px] mx-auto mt-16 ">
-          <img className="w-20" src={leafImg} alt="" />
+          <img
+            className="w-20"
+            src={"https://i.postimg.cc/SsJGhZ0p/fulles.png"}
+            alt=""
+          />
           <p className="text-2xl mb-3 text-[#07847f] font-bold">
             {" "}
             Change The World.
@@ -33,14 +37,19 @@ const NaturalDisaster = () => {
           <button className="btn border-none bg-[#07847f] mr-5">
             <Link to="/causes">All Causes</Link>
           </button>
-          <button className="btn border-none bg-[#07847f]"><Link to="/donate">Donate Now</Link></button>
+          <button className="btn border-none bg-[#07847f]">
+            <Link to="/donate">Donate Now</Link>
+          </button>
         </div>
 
         {/* banner section  */}
         <div className="py-10">
           <div className="avatar relative">
             <div className="lg:w-[600px] rounded-full ring ring-[#07847f] ring-offset-base-100 ring-offset-2">
-              <img src={naturalImg} alt="" />
+              <img
+                src={"https://i.postimg.cc/jqnh3kQH/natural-Disaster.jpg"}
+                alt=""
+              />
               <div className="absolute flex justify-center items-center bottom-0 border-4 w-72 h-72 rounded-full bg-lime-200 border-[#07847f]">
                 <p className="text-center text-3xl font-extrabold p-6">
                   Natural Disaster In Our Bangladesh
@@ -75,8 +84,12 @@ const NaturalDisaster = () => {
               button!!
             </p>
             <div className="lg:mx-64 flex">
-              <button className="btn bg-lime-900 mr-6"><Link to="/our-events">Events</Link></button>
-              <button className="btn bg-lime-900"><Link to="/causes">Causes</Link></button>
+              <button className="btn bg-lime-900 mr-6">
+                <Link to="/our-events">Events</Link>
+              </button>
+              <button className="btn bg-lime-900">
+                <Link to="/causes">Causes</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -156,7 +169,11 @@ const NaturalDisaster = () => {
         <div className="grid grid-cols-3 gap-5 m-10 text-white">
           <div className="border border-lime-500 p-9 bg-lime-900">
             <div className="flex items-center">
-              <img className="mr-6" src={waterImg} alt="" />
+              <img
+                className="mr-6"
+                src={"https://i.postimg.cc/hj61P9gQ/water-drop.png"}
+                alt=""
+              />
               <p className="text-4xl font-semibold">Clean Water</p>
             </div>
             <p className="pt-6 text-lg">
@@ -171,7 +188,11 @@ const NaturalDisaster = () => {
           </div>
           <div className="border border-lime-500 p-9 bg-orange-500">
             <div className="flex items-center">
-              <img className="mr-6" src={medicinImg} alt="" />
+              <img
+                className="mr-6"
+                src={"https://i.postimg.cc/vm8zPY3T/medicine.png"}
+                alt=""
+              />
               <p className="text-4xl font-semibold">Medicale Help</p>
             </div>
             <p className="pt-6 text-lg">
@@ -188,7 +209,11 @@ const NaturalDisaster = () => {
 
           <div className="border border-lime-500 p-9 bg-green-900">
             <div className="flex items-center">
-              <img className="mr-6" src={foodImg} alt="" />
+              <img
+                className="mr-6"
+                src={"https://i.postimg.cc/Mpm5bM0g/food.png"}
+                alt=""
+              />
               <p className="text-4xl font-semibold">Healthy Food</p>
             </div>
             <p className="pt-6 text-lg">
@@ -211,13 +236,21 @@ const NaturalDisaster = () => {
         <div className="bg-slate-200 relative p-7 rounded-r-full">
           <img
             className="w-96 h-96 ml-36 rounded-full object-cover"
-            src={volnImg}
+            src={"https://i.postimg.cc/Ls0zNzJQ/volunteer.jpg"}
             alt=""
           />
-          <img className="absolute right-0" src={img} alt="" />
+          <img
+            className="absolute right-0"
+            src={"https://i.postimg.cc/pd0B4w6Z/heart01.png"}
+            alt=""
+          />
         </div>
         <div className="text-center text-4xl bg-slate-100 font-bold">
-          <img className="w-96 mx-auto" src={volunIcon} alt="" />
+          <img
+            className="w-96 mx-auto"
+            src={"https://i.postimg.cc/HnM4JVsZ/volunteer-Icon.png"}
+            alt=""
+          />
           <CountUp start={50} end={275} duration={2.75} suffix="+" />
           <p>Volunteers</p>
         </div>
@@ -241,7 +274,9 @@ const NaturalDisaster = () => {
         <p className="text-4xl font-bold mb-3">
           "To Donate, Go To Donate Page"
         </p>
-        <button className="btn border-none bg-lime-900"><Link to="/donate">Donate Now</Link></button>
+        <button className="btn border-none bg-lime-900">
+          <Link to="/donate">Donate Now</Link>
+        </button>
       </div>
     </div>
   );

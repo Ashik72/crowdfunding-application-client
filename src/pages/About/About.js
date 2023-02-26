@@ -2,70 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function About() {
-  //   const products = [
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     {
-  //       id: 1,
-  //       name: "Basic Tee",
-  //       href: "#",
-  //       imageSrc:
-  //         "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  //       imageAlt: "Front of men's Basic Tee in black.",
-  //       price: "$35",
-  //       color: "Black",
-  //     },
-  //     // More products...
-  //   ];
-
   return (
     <div className="relative">
       <div
@@ -85,8 +21,6 @@ export default function About() {
               <h2 className="text-lg md:text-2xl font-serif text-gray-500">
                 Helping hands and Helping smiles
               </h2>
-
-              {/* <span className="hidden md:block absolute top-0 right-0 w-48 h-4 bg-blue-900 -mr-24 mt-56"></span> */}
             </div>
           </div>
 
@@ -125,12 +59,12 @@ export default function About() {
             natural ingredients and still provide consistently great tanning
             results.
           </p>
-          <a
-            href="#"
+          <Link
+            to="#"
             className="inline-block bg-blue-200 text-white text-sm tracking-widest font-heading px-8 py-4 mt-4"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>
       <h2 className="text-center uppercase font-display text-lg lg:text-2xl font-bold text-black py-1 md:py-24 px-6">
@@ -145,10 +79,6 @@ export default function About() {
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
-          {/* <div className="p-6">
-                <a href="/product" className="block font-semibold text-black mb-1">Shoes</a>
-                <div>£39</div>
-            </div> */}
         </div>
         <div className="col-span-1 row-span-1 lg:col-span-2 lg:row-span-2">
           <div className="w-full h-52 lg:h-96 relative">
@@ -703,6 +633,7 @@ export default function About() {
         </div>
 
         <img
+          alt=""
           src="https://www.ohchr.org/sites/default/files/styles/hero_image_1/public/2022-08/Garment-workers-bangladesh.jpg?itok=uPgEW1cp"
           className="absolute top-0 left-0 w-full h-full object-cover z-10"
         />

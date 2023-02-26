@@ -1,19 +1,9 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
 const DonateGallery = () => {
   return (
     <div className="py-16">
       <div className="">
-        {/* <div className="donate-gallery-item donate-gallery-images-1">
-          <img
-            src="https://i.ibb.co/C7XycNj/boy-1226964-1920.jpg"
-            className=""
-            alt=""
-          />
-        </div>
-
-  */}
-
         <div className="row">
           <div className="diamond1">
             <img
@@ -50,7 +40,11 @@ const DonateGallery = () => {
           </div>
 
           <div className="diamond5">
-            <img src="https://i.ibb.co/Vq7qppG/dsdf.jpg" alt="" className="img5" />
+            <img
+              src="https://i.ibb.co/Vq7qppG/dsdf.jpg"
+              alt=""
+              className="img5"
+            />
           </div>
 
           <br />
@@ -71,7 +65,11 @@ const DonateGallery = () => {
           </div>
 
           <div className="diamond8">
-            <img src="https://i.ibb.co/cQkFCWX/df.png" alt="" className="img8" />
+            <img
+              src="https://i.ibb.co/cQkFCWX/df.png"
+              alt=""
+              className="img8"
+            />
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import old from "../../Components/assets/images/old.jpg";
+// import old from "../../Components/assets/images/old.jpg";
 const NeedMoreHelp = () => {
   return (
     <div
       className="my-32 w-4/5 mx-auto rounded p-[100px] text-white bg-[#6d1b7b]"
       style={{
-        backgroundImage: `linear-gradient(#0b0b0b93,#0b0b0b93),url(${old})`,
+        backgroundImage: `linear-gradient(#0b0b0b93,#0b0b0b93),url(${"https://i.postimg.cc/CLQSM5fT/old.jpg"})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}

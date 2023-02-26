@@ -1,27 +1,5 @@
 import React from "react";
-// import img1 from "../../images/img22.jpg";
-// import img1 from "https://i.postimg.cc/MGWSxdnQ/img1.jpg";
-// import img2 from "../../images/img2.jpg";
-// import img3 from "../../images/img3.jpg";
-// import img4 from "../../images/img4.jpg";
-// import img5 from "../../images/img5.jpg";
-// import img6 from "../../images/img6.jpg";
-// import img7 from "../../images/img7.jpg";
-// import img8 from "../../images/img8.jpg";
-// import img9 from "../../images/img9.jpg";
-// import img10 from "../../images/flooding.jpg";
-// import img11 from "../../images/img11.jpg";
-// import img12 from "../../images/img12.jpg";
-// import img13 from "../../images/img13.jpg";
-// import img14 from "../../images/img14.jpg";
-// import img15 from "../../images/img15.jpg";
-// import img16 from "../../images/img16.jpg";
-// import img17 from "../../images/img17.jpg";
-// import img18 from "../../images/img18.jpg";
-// import img19 from "../../images/img19.jpg";
-// import img20 from "../../images/img20.jpg";
-// import img21 from "../../images/img21.jpg";
-// import heartImg from "../../images/heart01.png";
+
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
 
@@ -31,7 +9,6 @@ const Gallery = () => {
   return (
     <div>
       <div className="bannerImg">
-        {/* <img className='w-full h-96 object-cover' src={bannerImg} alt="" /> */}
         <h1 className="text-4xl font-bold">Gallery</h1>
       </div>
 

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import logo2 from "../../assets/logo/logo.png";
-import logo from "../../assets/logo/logo1.png";
+// import logo2 from "../../assets/logo/logo.png";
+// import logo from "../../assets/logo/logo1.png";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 const Navbar = () => {
@@ -287,12 +287,12 @@ const Navbar = () => {
             <Link to="/" className="navbar-brand">
               <div className="">
                 <img
-                  src={logo2}
+                  src={"https://i.postimg.cc/JhWwtkrg/logo.png"}
                   className={`w-[20%] lg:w-[14%]  absolute top-0 left-0 ${logoHidden}`}
                   alt=""
                 />
                 <img
-                  src={logo}
+                  src={"https://i.postimg.cc/htkxHSDc/logo1.png"}
                   className={`w-[20%] lg:w-[14%]  absolute top-0 left-0 ${logoShow}`}
                   alt=""
                 />
@@ -325,7 +325,11 @@ const Navbar = () => {
                 ></i>
                 <div>
                   <span className=" w-full flex justify-between items-center">
-                    <img src={logo} className="max-w-[150px]" alt="" />
+                    <img
+                      src={"https://i.postimg.cc/htkxHSDc/logo1.png"}
+                      className="max-w-[150px]"
+                      alt=""
+                    />
                   </span>
                   {/* <!-- menu close --> */}
                   <div className="text-gray-200 grid gap-2">{navItems}</div>

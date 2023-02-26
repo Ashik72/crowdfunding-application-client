@@ -3,7 +3,6 @@ import Button from "../../../typography/Button";
 const heroBottomEffect1 = "https://i.ibb.co/Vq7qppG/dsdf.jpg";
 const heroBottomEffect2 = "https://i.ibb.co/f9dPTMs/girl-2529907-1920.jpg";
 const heroBottomEffect3 = "https://i.ibb.co/N7QF6N0/face-2369766-1920.jpg";
-const heroBg1 = "https://i.ibb.co/s9rv3tY/hero-2.png";
 
 const Hero = () => {
   return (

@@ -1,5 +1,4 @@
 import React from "react";
-const help = "https://i.ibb.co/7XbpRqQ/help.jpg";
 
 const HelpPeople = () => {
   return (
